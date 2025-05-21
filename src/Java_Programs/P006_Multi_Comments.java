@@ -1,3 +1,5 @@
+package Java_Programs;
+
 public class P006_Multi_Comments {
     public static void main(String[] args) {
         /*
