@@ -1,6 +1,6 @@
 package Java_Programs;
 
-public class AddTwoNumbers {
+public class P003_AddTwoNumbers {
     public static void main(String[] args) {
         int a = 10;
         int b = 20;
