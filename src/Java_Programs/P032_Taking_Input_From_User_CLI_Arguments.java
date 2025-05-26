@@ -1,6 +1,6 @@
 package Java_Programs;
 
-public class P032_Taking_Input_From_User {
+public class P032_Taking_Input_From_User_CLI_Arguments {
     public static void main(String[] args) {
         //age = 23 -> Minor (age<18), Adult (age>18), Senior (age>65)
 
