@@ -83,19 +83,26 @@ public class P026_Operators {
                 System.out.println(a+b+"Anuj"+"Rajput");
 
         //Misc Operators - from Digital Electronics
-        // ~ Bitwise Not - ~n = -n - 1
-        System.out.println(~a);
-        // >> Right Shift - 1010 << 1 = 10100
-        System.out.println(a<<1);
-        // << Left Shift - 1010 >> 1 = 0101
-        System.out.println(a>>1);
-        // ^ XOR
-        System.out.println(1010 ^ 0011);
+            // ~ Bitwise Not - ~n = -n - 1
+                System.out.println(~a);
+            // >> Right Shift - 1010 << 1 = 10100
+                System.out.println(a<<1);
+            // << Left Shift - 1010 >> 1 = 0101
+                System.out.println(a>>1);
+            // ^ XOR
+                System.out.println(1010 ^ 0011);
+
+        //Ternary Operator // ? :
+            int age = 10;
+            String CanIVote = age >= 18 ? "Yes":"No";
+            System.out.println(CanIVote);
 
         //New Operator - OOPs related
         String s = new String("Anuj"); // new is keyword and operator both
 
         //instanceof operator - OOPs related
         System.out.println(s instanceof String);
+
+
     }
 }
