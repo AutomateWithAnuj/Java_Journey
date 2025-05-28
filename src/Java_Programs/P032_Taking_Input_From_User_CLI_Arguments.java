@@ -13,5 +13,8 @@ public class P032_Taking_Input_From_User_CLI_Arguments {
 
         String result = (I_age<18)?"Minor":((I_age>65)?"Senior":"Adult");
         System.out.println(result);
+
+        //if 2 values are given on the place of 1 value required in program through CLI
+        // then you can take only one value also no error we will get
     }
 }
