@@ -19,6 +19,14 @@ public class P042_Triangle_Classifier {
         int c = sc.nextInt();
         System.out.printf("%d,%d,%d",a,b,c);
         System.out.println();
+        if(a<=0||b<=0||c<=0){
+            System.out.println("This is not a triangle");
+            System.exit(0);
+        }
+        if(a+b<=c||b+c<=a||a+c<=b){
+            System.out.println("This is not a triangle");
+            System.exit(0);
+        }
         if(a==b&&b==c){
             System.out.println("It is an equilateral triangle");
         } else if (a==b||b==c) {
