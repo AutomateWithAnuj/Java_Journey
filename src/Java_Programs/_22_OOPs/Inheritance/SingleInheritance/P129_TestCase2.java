@@ -1,4 +1,4 @@
-package Java_Programs._22_OOPs.Inheritance;
+package Java_Programs._22_OOPs.Inheritance.SingleInheritance;
 
 public class P129_TestCase2 extends P127_CommonToAll_Inheritance {
     void runningTC2(){

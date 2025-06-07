@@ -1,4 +1,4 @@
-package Java_Programs._22_OOPs.Inheritance;
+package Java_Programs._22_OOPs.Inheritance.SingleInheritance;
 
 public class P127_CommonToAll_Inheritance {
     void startBrowser(){

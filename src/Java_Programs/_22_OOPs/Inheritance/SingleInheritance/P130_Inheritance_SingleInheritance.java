@@ -1,4 +1,4 @@
-package Java_Programs._22_OOPs.Inheritance;
+package Java_Programs._22_OOPs.Inheritance.SingleInheritance;
 
 public class P130_Inheritance_SingleInheritance {
     public static void main(String[] args) {
