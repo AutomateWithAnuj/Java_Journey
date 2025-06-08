@@ -1,4 +1,4 @@
-package Java_Programs._22_OOPs.Overloading;
+package Java_Programs._22_OOPs.Polymorphism.MethodOverloading;
 
 public class P084_ManyMain_Method_Overloading {
     //yes we can have many main methods that can be possible by method overloading
