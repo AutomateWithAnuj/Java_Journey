@@ -1,6 +1,6 @@
 package Java_Programs._26_OOPs_Encapsulation;
 
-public class P137_Ecap_Demo {
+public class P137_Encap_Demo {
     public static void main(String[] args) {
         VWOLogin vwoLogin = new VWOLogin("admin", "pass123");
         System.out.println(vwoLogin.password); //he can see the password

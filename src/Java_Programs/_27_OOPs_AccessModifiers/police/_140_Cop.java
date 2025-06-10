@@ -1,11 +1,11 @@
-package Java_Programs._27_AccessModifiers.police;
+package Java_Programs._27_OOPs_AccessModifiers.police;
 
-public class Cop {
+public class _140_Cop {
     public int gun;
     String iCard;
 
     //Parameterized Constructor
-    public Cop(int bullet){
+    public _140_Cop(int bullet){
         this.gun = bullet;
     }
     //Method //Behaviour
