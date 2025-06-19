@@ -1,6 +1,6 @@
 package Java_Programs._34_Wrapper_classes;
 //in this program we have maximum number of the oops concepts
-public class Wrapper {
+public class P167_Wrapper {
     public static void main(String[] args) {
         Mobile iphone = new Mobile(1,"Iphone 16:",126555.55);
         Mobile Samsung = new Mobile(1,"ultra 24:",130555.55);
