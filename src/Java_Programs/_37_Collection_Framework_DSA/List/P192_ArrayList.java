@@ -1,6 +1,6 @@
 package Java_Programs._37_Collection_Framework_DSA.List;
 
-import java.util.ArrayList;
+import java.util.ArrayList; //we have to import both ArrayList and List
 import java.util.List;
 
 public class P192_ArrayList {
