@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class P205_Comparable{
+public class P205_Comparable {
     public static void main(String[] args) {
         Student s1 = new Student(101, "Anuj",24);
         Student s2 = new Student(104, "Amit",55);
