@@ -8,7 +8,7 @@ public class P188_Generic_Class {
         //T is a placeholder it can have any datatype
     }
 }
-class GenericClass<T>{
+class GenericClass<T>{ //here in generic class we have to give generic After classname
     private T data;
     public GenericClass(T data){
         this.data = data;
@@ -18,5 +18,5 @@ class GenericClass<T>{
     }
     public T getData(){
         return this.data;
-    }
+    } //so for generic class no need to mention genric again we can use it directly
 }
