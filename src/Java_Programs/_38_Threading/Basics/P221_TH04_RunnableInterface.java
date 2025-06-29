@@ -1,8 +1,8 @@
-package Java_Programs._38_Threading;
+package Java_Programs._38_Threading.Basics;
 
 public class P221_TH04_RunnableInterface {
     public static void main(String[] args) {
-        WorkerTh04 w1 = new WorkerTh04();
+        WorkerTh04 w1 = new WorkerTh04(); //when we create thread by new keyword like this it will be in new state
         Thread t1 = new Thread(w1);
         t1.start();
 

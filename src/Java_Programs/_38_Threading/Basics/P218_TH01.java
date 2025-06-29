@@ -1,4 +1,4 @@
-package Java_Programs._38_Threading;
+package Java_Programs._38_Threading.Basics;
 
 public class P218_TH01 {
     public static void main(String[] args) throws InterruptedException {

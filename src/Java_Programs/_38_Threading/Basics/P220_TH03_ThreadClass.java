@@ -1,4 +1,4 @@
-package Java_Programs._38_Threading;
+package Java_Programs._38_Threading.Basics;
 
 public class P220_TH03_ThreadClass {
     public static void main(String[] args) {
