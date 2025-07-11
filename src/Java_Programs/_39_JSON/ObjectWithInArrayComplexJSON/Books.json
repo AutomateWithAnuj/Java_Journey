@@ -1,0 +1,16 @@
+{
+  "books" : [
+    {
+      "name": "Think and Grow Rich",
+      "author": "Napoleon Hill"
+    },
+    {
+      "name": "Rich Dad poor Dead",
+      "author": "Robert T. Kiyosaki"
+    },
+    {
+      "name": "The Power of Habit",
+      "author": "Charles Duhigg"
+    }
+  ]
+}
