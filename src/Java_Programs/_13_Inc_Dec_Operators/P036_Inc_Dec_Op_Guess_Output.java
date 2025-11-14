@@ -3,7 +3,7 @@ package Java_Programs._13_Inc_Dec_Operators;
 public class P036_Inc_Dec_Op_Guess_Output {
     public static void main(String[] args) {
         int a = 10;
-        System.out.println(a++ + a);
+        System.out.println(a++ + a); //21
         // A -> a++ -> ExpA -> 10, a = 11
         // B -> a -> 11
         // A+B -> ExpA + ExpB -> 21
