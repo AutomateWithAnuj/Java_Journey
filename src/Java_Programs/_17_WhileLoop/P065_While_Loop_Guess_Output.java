@@ -6,6 +6,7 @@ public class P065_While_Loop_Guess_Output {
         while(i>0){
             System.out.println("Enter");
             System.out.println(i);
+            //no output
         }
     }
 }
