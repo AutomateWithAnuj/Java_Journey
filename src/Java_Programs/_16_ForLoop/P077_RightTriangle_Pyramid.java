@@ -14,7 +14,7 @@ public class P077_RightTriangle_Pyramid {
         //*****
         for (int i=0;i<n;i++){
             for (int j=0;j<n;j++){
-                if(i>=j){
+                if(i>=j){ //print when j is smaller or equal to i
                     System.out.print("*");
                 }
             }
