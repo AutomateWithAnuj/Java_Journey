@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class P069_While_Guessing_Game_Random {
     public static void main(String[] args) {
         //Guess a number between 1 and 100
-        Random random = new Random();
-        int numberToGuess = random.nextInt(100)+1;//it will give values from 0 to 9 so we can add 1
-        Scanner sc = new Scanner(System.in);
+        Random random = new Random(); //using random utility in java to create a randome number
+        int numberToGuess = random.nextInt(100)+1;//it will give values from 0 to 99, so we can add 1
+        Scanner sc = new Scanner(System.in); //lets suppose you are trying to guess that number
 
         int guess;
         int attempts = 0;
