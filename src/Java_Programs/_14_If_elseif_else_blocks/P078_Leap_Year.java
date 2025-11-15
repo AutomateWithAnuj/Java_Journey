@@ -7,9 +7,9 @@ public class P078_Leap_Year {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a year: ");
         int year = sc.nextInt(); //32 bit size //-2,147,483,648  to  2,147,483,647
-        if(year%100==0&&(year/100)%4==0){
+        if(year%100==0&&(year/100)%4==0){ //if year is divisible by 100 then remove 2 zeros and check if the lefted number is divisible by 4
             System.out.println("Yes it is a leap year");
-        }else if (year%100!=0&&year%4==0){
+        }else if (year%100!=0&&year%4==0){ //if year is not divisible by 100 then check if the lefted number is divisible by 4
             System.out.println("Yes it is a leap year");
         }else {
             System.out.println("No it is not a leap year");
