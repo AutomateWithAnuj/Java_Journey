@@ -3,6 +3,7 @@ package Java_Programs._14_If_elseif_else_blocks;
 import java.util.Scanner;
 
 public class P074_3Fizz_5Buzz_15FizzBuzz {
+    //Fizz(%3=0) or Buzz(%5=0) program to check 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number to check Fizz or Buzz: ");
