@@ -9,7 +9,7 @@ public class P053_For_Loop_Guess_Output {
             }
             else{
                 System.out.println("No Gift");
-                //this the son turns 16 papa will not give any gift to him
+                //till the son turns 16 papa will not give any gift to him
             }
         }
     }
