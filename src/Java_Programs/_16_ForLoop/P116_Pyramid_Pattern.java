@@ -3,6 +3,18 @@ package Java_Programs._16_ForLoop;
 import java.util.Scanner;
 
 public class P116_Pyramid_Pattern {
+    
+//          *
+//         ***
+//        *****
+//       *******
+//      *********
+//     ***********
+//    *************
+//   ***************
+//  *****************
+// *******************
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
