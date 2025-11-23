@@ -1,6 +1,6 @@
 package Java_Programs._11_Operators;
 
-public class P030_Nested_Ternary_Usage {
+public class P030_Nested_Ternary_Usage_Max_Amoung_3 {
     public static void main(String[] args) {
         //result = condition1 ? expression1 : (condition2 ? expression2 : expression3)
         int number = 5;
