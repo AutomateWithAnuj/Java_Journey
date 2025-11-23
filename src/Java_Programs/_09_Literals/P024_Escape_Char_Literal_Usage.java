@@ -34,5 +34,12 @@ public class P024_Escape_Char_Literal_Usage {
         char a1 = 'A'; // ASCII 65
         char b1 = 'B'; // ASCII 66
         System.out.println(a1+b1);                        // Output: 131
+
+        // ----------------------------------------------
+        // Get ASCII value of any character automatically
+        // ----------------------------------------------
+        char ch = 'Z';
+        int asciiValue = (int) ch;                        // Casting char → int
+        System.out.println("ASCII of " + ch + " is: " + asciiValue);
     }
 }
