@@ -6,7 +6,7 @@ public class P015_Variables {
 
         byte b = 10; //store only integer value but limited from -128 to 127.
         //so 10 is an integer literal assigned to the byte type of container
-//        b = 128; out of limit
+        //b = 128; out of limit //incompatible types
         b=55+1;
         System.out.println(b);
     }
