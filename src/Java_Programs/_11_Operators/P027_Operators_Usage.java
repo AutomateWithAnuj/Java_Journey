@@ -1,7 +1,7 @@
 package Java_Programs._11_Operators;
 import java.lang.Math;
 
-public class P027_Operators_Usage {
+public class P027_Operators_Usage_CubeRoot {
     public static void main(String[] args) {
 
         int x = 10;
