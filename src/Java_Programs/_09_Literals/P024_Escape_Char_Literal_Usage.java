@@ -7,17 +7,32 @@ public class P024_Escape_Char_Literal_Usage {
         char back_space = '\b';
         char carriage_return = '\r';
 
-        System.out.println("AnujRajput");
-        System.out.println("Anuj"+new_line+"Rajput");
-        System.out.println("Anuj"+'\n'+"Rajput");
-        System.out.println("Anuj"+'\t'+"Rajput");
-        System.out.println("Anuj"+'\b'+"Rajput");
-        System.out.println("Anuj"+'\r'+"Rajput");
+        System.out.println("AnujRajput");                 // Output: AnujRajput
+
+        System.out.println("Anuj"+new_line+"Rajput");     // Output:
+                                                          // Anuj
+                                                          // Rajput
+
+        System.out.println("Anuj"+'\n'+"Rajput");         // Output:
+                                                          // Anuj
+                                                          // Rajput
+
+        System.out.println("Anuj"+'\t'+"Rajput");         // Output: Anuj    Rajput  (tab space)
+
+        System.out.println("Anuj"+'\b'+"Rajput");         // Output: AnuRajput  
+                                                          // (backspace removes 'j')
+
+        System.out.println("Anuj"+'\r'+"Rajput");         // Output: Rajput
+                                                          // (\r brings cursor to start; Rajput overrides Anuj)
 
         System.out.println("Hi, This is a first line\n This is second line\n This is third line");
+                                                          // Output:
+                                                          // Hi, This is a first line
+                                                          //  This is second line
+                                                          //  This is third line
 
-        char a1 = 'A'; //ASCII -> 65
-        char b1 = 'B'; // 66
-        System.out.println(a1+b1);
+        char a1 = 'A'; // ASCII 65
+        char b1 = 'B'; // ASCII 66
+        System.out.println(a1+b1);                        // Output: 131
     }
 }
