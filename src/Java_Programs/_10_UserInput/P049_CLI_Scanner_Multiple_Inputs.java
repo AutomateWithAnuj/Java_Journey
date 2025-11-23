@@ -4,29 +4,42 @@ import java.util.Scanner;
 
 public class P049_CLI_Scanner_Multiple_Inputs {
     public static void main(String[] args) {
-        /*System.out.println("Enter name, age, salary");
-        String name = args[0];
-        int age = Integer.parseInt(args[1]);
-        double salary = Double.parseDouble(args[2]);
+
+        /*
+        // CLI argument version (runs through Edit Configurations)
+        System.out.println("Enter name, age, salary");
+        String name = args[0];                      // takes name from CLI
+        int age = Integer.parseInt(args[1]);        // converts string → int
+        double salary = Double.parseDouble(args[2]);// converts string → double
 
         System.out.println(name);
         System.out.println(age);
-        System.out.println(salary);*/
+        System.out.println(salary);
+        */
 
+        // Scanner version → takes inputs from keyboard
         Scanner sc = new Scanner(System.in);
+
+        // Asking user to enter multiple inputs
         System.out.println("Enter the name, age, salary");
+
+        // nextLine() → reads full string including spaces
         String name = sc.nextLine();
+
+        // nextInt() → reads integer input
         int age = sc.nextInt();
+
+        // nextDouble() → reads decimal number
         double salary = sc.nextDouble();
 
-        //sc.close() here also we can close the scanner
-        //it must be closed after when it's usage is over
+        // Printing the user-provided values
         System.out.println("User Information");
-        System.out.println("Name: "+name);
-        System.out.println("Age: "+age);
-        System.out.println("Salary: "+salary);
+        System.out.println("Name: " + name);     // Output example: Name: Anuj Rajput
+        System.out.println("Age: " + age);       // Output example: Age: 24
+        System.out.println("Salary: " + salary); // Output example: Salary: 35000.0
 
-        sc.close(); //it is like a open tap in java when we are done we have to close it
-        //ideal way is to close in end it's a good practice
+        // Closing scanner (best practice)
+        sc.close(); 
+        // Think of it like closing a running water tap to save resources
     }
 }
