@@ -4,15 +4,15 @@ public class P028_Type_Casting {
     public static void main(String[] args) {
         //Implicit Widening
         byte b = 10;
-        int a = b;
+        int a = b; //// byte → int (automatic)
 
-        //Explicit Widening
+        //Explicit Widening (not required but possible)
         b = 10;
-        a = (int)b;
+        a = (int)b; // Explicit widening
 
         //Implicit Narrowing
         a = 170;
-        //b = a; //not allowed
+        //b = a; //not allowed because int is converted into a byte
 
         //Explicit Narrowing
         a = 170;
