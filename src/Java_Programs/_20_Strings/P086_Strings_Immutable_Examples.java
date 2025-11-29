@@ -4,6 +4,7 @@ public class P086_Strings_Immutable_Examples {
     public static void main(String[] args) {
         
         String name = "Anuj";  
+        
         // Strings in Java are immutable, meaning once created, 
         // their value cannot be changed in memory.
         
@@ -21,4 +22,11 @@ public class P086_Strings_Immutable_Examples {
         // But the variable 'name' still points to the old string.
         // To actually modify the value, we must reassign the reference:
         
-        name = name.toUpperCase(); // Now name points to "AN
+        name = name.toUpperCase(); // Now name points to "ANUJ"
+        System.out.println(name); // Output: ANUJ
+        
+        // Summary:
+        // Any modification operation on a String creates a NEW String object.
+        // The original string remains unchanged because Strings are immutable.
+    }
+}
