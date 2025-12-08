@@ -2,16 +2,25 @@ package Java_Programs._21_Arrays;
 
 public class P104_Reverse_Array {
     public static void main(String[] args) {
-        int[] numbers = {1,2,3,4,5};
-        //5,4,3,2,1 we want from this
-        for (int i=0;i<=numbers.length/2;i++){
-            int temp = numbers[numbers.length-1-i];
-            numbers[numbers.length-1-i]=numbers[i];
-            numbers[i]=temp;
-        }
-        for (int i=0;i<numbers.length;i++){
-            System.out.print(numbers[i]+" ");
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Using two-pointer approach to reverse the array
+        int start = 0;
+        int end = numbers.length - 1;
+
+        while (start < end) {
+            int temp = numbers[start];
+            numbers[start] = numbers[end];
+            numbers[end] = temp;
+
+            start++;
+            end--;
         }
 
+        // Printing reversed array
+        System.out.print("Reversed Array: ");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
     }
 }
