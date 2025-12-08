@@ -1,54 +1,63 @@
-package Java_Programs._21_Arrays;
+import java.util.Scanner;
 
-public class P107_2D_Array {
+public class Array2DExample {
     public static void main(String[] args) {
 
-        // A 2D array is like a table (Matrix format)
-        // Example representation:
-        /*
-             1  2  3
-             4  5  6
-             7  8  9
-        */
+        Scanner sc = new Scanner(System.in);
 
-        // Total Rows (R) = 3
-        // Total Columns (C) = 3
+        // -------------------------------------------
+        // 1️⃣ Declaration of a 2D array
+        // -------------------------------------------
 
-        // ----------------------- Method 1: Declare then Assign Values -----------------------
-        // Creating a 2D array of size 3x3
-        int[][] array_2d = new int[3][3];
+        // Example A: Declaring only (size not required immediately)
+        int[][] arr1;
 
-        // Assigning values manually (index based: row, column)
-        array_2d[0][0] = 1;
-        array_2d[0][1] = 2;
-        array_2d[0][2] = 3;
+        // Example B: Declaring with row and column size
+        // NOTE: Size must be given when memory allocation happens.
+        int[][] arr2 = new int[3][3];
+        // Here:
+        // 3 --> number of rows (mandatory)
+        // 3 --> number of columns (mandatory)
+        // Both rows and columns must be mentioned while creating memory.
 
-        array_2d[1][0] = 4;
-        array_2d[1][1] = 5;
-        array_2d[1][2] = 6;
+        // -------------------------------------------
+        // 2️⃣ Initializing a 2D array (Different ways)
+        // -------------------------------------------
 
-        array_2d[2][0] = 7;
-        array_2d[2][1] = 8;
-        array_2d[2][2] = 9;
-
-
-        // ----------------------- Method 2: Direct Initialization -----------------------
-        // Cleaner and readable format, used most of the time
-        int[][] array_2d_old = {
-                {1, 2, 3},  // Row 0
-                {4, 5, 6},  // Row 1
-                {7, 8, 9}   // Row 2
+        // Way 1: Direct initialization with values (most common)
+        int[][] arr3 = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
         };
 
+        // Way 2: Declare first, fill later using loops or input
+        int[][] matrix = new int[3][3]; 
+        // Here "3 (rows)" and "3 (columns)" are mandatory.
 
-        // ----------------------- Printing the 2D Array -----------------------
-        System.out.println("2D Array Elements:");
+        System.out.println("Enter 9 values to fill the 3x3 matrix:");
 
-        for (int i = 0; i < array_2d_old.length; i++) {           // Outer loop for rows
-            for (int j = 0; j < array_2d_old[i].length; j++) {   // Inner loop for columns
-                System.out.print(array_2d_old[i][j] + " ");
+        // -------------------------------------------
+        // 3️⃣ Taking user input in 2D array using loops
+        // -------------------------------------------
+        for (int i = 0; i < 3; i++) {         // Loop for rows
+            for (int j = 0; j < 3; j++) {    // Loop for columns
+                matrix[i][j] = sc.nextInt();
             }
-            System.out.println(); // For new line after each row
         }
+
+        // -------------------------------------------
+        // 4️⃣ Displaying the 2D array
+        // -------------------------------------------
+        System.out.println("The entered 2D matrix is:");
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(); // Move to next row
+        }
+
+        sc.close();
     }
 }
