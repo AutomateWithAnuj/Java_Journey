@@ -19,10 +19,10 @@ public class P106_2nd_HighestNo_Array {
         
         
         // -------------------- Approach 2: Without Sorting --------------------
-        // Finding second highest manually
+        // Finding second-highest manually
         
         int max = numbers[0];
-        int secondMax = Integer.MIN_VALUE;  // Smallest possible value
+        int secondMax = Integer.MIN_VALUE;  // Smallest possible value that an int can take
         
         
         // Step 1: Find the maximum value
@@ -32,7 +32,7 @@ public class P106_2nd_HighestNo_Array {
             }
         }
         
-        // Step 2: Find the second highest value (value < max)
+        // Step 2: Find the second-highest value (value < max)
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > secondMax && numbers[i] != max) {
                 secondMax = numbers[i];
