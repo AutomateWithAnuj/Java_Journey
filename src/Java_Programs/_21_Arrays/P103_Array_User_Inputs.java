@@ -4,24 +4,35 @@ import java.util.Scanner;
 
 public class P103_Array_User_Inputs {
     public static void main(String[] args) {
-        //Using CLI
+
+        // *** Method 1: Using Command Line Arguments ***
         int[] marks2 = new int[5];
-        for (int i=0;i<marks2.length;i++){
-            marks2[i]=Integer.parseInt(args[i]);
+        
+        for (int i = 0; i < marks2.length; i++) {
+            marks2[i] = Integer.parseInt(args[i]); // converting String input to int
         }
-        for (int i=0;i<marks2.length;i++){
-            System.out.print(marks2[i]+" ");
+
+        System.out.print("Values using CLI: ");
+        for (int i = 0; i < marks2.length; i++) {
+            System.out.print(marks2[i] + " ");
         }
-        //using Scanner Class
+
+        System.out.println(); // For line spacing
+
+        // *** Method 2: Using Scanner Class ***
         Scanner sc = new Scanner(System.in);
         int[] marks = new int[5];
-        //System.out.println(marks[0]);
-        for (int i=0;i<marks.length;i++){
-            System.out.printf("Enter %d number: ",i);
-            marks[i] = sc.nextInt();
+
+        for (int i = 0; i < marks.length; i++) {
+            System.out.printf("Enter value for index %d: ", i);
+            marks[i] = sc.nextInt(); // reading integer input from user
         }
-        for (int i=0;i<marks.length;i++){
-            System.out.print(marks[i]+" ");
+
+        System.out.print("Values using Scanner: ");
+        for (int i = 0; i < marks.length; i++) {
+            System.out.print(marks[i] + " ");
         }
+
+        sc.close(); // good practice
     }
 }
