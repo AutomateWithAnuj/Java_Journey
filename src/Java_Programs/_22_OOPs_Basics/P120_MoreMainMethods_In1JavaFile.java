@@ -15,6 +15,14 @@ public class P120_MoreMainMethods_In1JavaFile {
     }
 }
 
+class P120_Copy {
+
+    // Another main() method inside another class
+    public static void main(String[] args) {
+        System.out.println("Hi");  // Main method of P120_Copy
+    }
+}
+
 // -----------------------------------------------------------
 // NOTE:
 // JVM treats each class as SEPARATE,
@@ -29,14 +37,6 @@ public class P120_MoreMainMethods_In1JavaFile {
 // So these classes can run independently.
 // -----------------------------------------------------------
 
-class P120_Copy {
-
-    // Another main() method inside another class
-    public static void main(String[] args) {
-        System.out.println("Hi");  // Main method of P120_Copy
-    }
-}
-
 // -----------------------------------------------------------
 // IMPORTANT POINTS:
 //
@@ -45,8 +45,9 @@ class P120_Copy {
 // ✔ When you click "Run" in your IDE (Eclipse, IntelliJ):
 //      → It runs the main() of the class you selected.
 //
-// ✔ If you run the entire file, the IDE will still
-//   only run the selected class's main() method.
+// ✔ Even if this file contains multiple main() methods,
+//   the IDE will execute ONLY the main() method of
+//   the class that you run or select.
 //
 // ✔ In real automation frameworks (Selenium/UFT/Java apps),
 //   we usually use ONLY one main() method.
