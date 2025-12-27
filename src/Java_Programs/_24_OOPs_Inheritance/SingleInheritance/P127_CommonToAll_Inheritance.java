@@ -1,16 +1,26 @@
 package Java_Programs._24_OOPs_Inheritance.SingleInheritance;
 
+// This class contains common functionalities
+// that can be shared by all test classes
 public class P127_CommonToAll_Inheritance {
-    void startBrowser(){
-        System.out.println("Start the browser");
+
+    // Method to start the browser
+    void startBrowser() {
+        System.out.println("Browser started");
     }
-    void closeBrowser(){
-        System.out.println("Close the browser");
+
+    // Method to close the browser
+    void closeBrowser() {
+        System.out.println("Browser closed");
     }
-    void readExcelFile(){
-        System.out.println("Reading File");
+
+    // Method to read data from an Excel file
+    void readExcelFile() {
+        System.out.println("Reading data from Excel file");
     }
-    void readDatabaseFile(){
-        System.out.println("Reading File");
+
+    // Method to read data from a Database
+    void readDatabaseFile() {
+        System.out.println("Reading data from Database");
     }
 }
