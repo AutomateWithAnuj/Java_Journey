@@ -1,12 +1,15 @@
 package Java_Programs._24_OOPs_Inheritance.MultiLevelInheritance;
 
-public class Grandfather{
-    void gf(){
-        System.out.println("GrandFather - 1BHK House");
+// Top-level parent class (Grandfather)
+public class Grandfather {
+
+    // Method representing Grandfather's property
+    void grandfatherHouse() {
+        System.out.println("Grandfather owns a 1BHK house");
     }
 
-    void home(){
-        System.out.println("GF-S1");
+    // Common method that can be inherited by all child classes
+    void familyHome() {
+        System.out.println("This is the ancestral family home");
     }
-
 }
