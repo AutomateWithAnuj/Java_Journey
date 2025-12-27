@@ -1,10 +1,17 @@
 package Java_Programs._24_OOPs_Inheritance.MultiLevelInheritance;
 
-public class Father extends Grandfather{
-    void f(){
-        System.out.println("Father - 2BHK House");
+// Middle-level class in Multilevel Inheritance
+// Father inherits properties from Grandfather
+public class Father extends Grandfather {
+
+    // Method representing Father's own property
+    void fatherHouse() {
+        System.out.println("Father owns a 2BHK house");
     }
-    void home(){
-        System.out.println("S-S3");
+
+    // Overriding the home() method of Grandfather
+    @Override
+    void familyHome() {
+        System.out.println("Father's version of the family home");
     }
 }
