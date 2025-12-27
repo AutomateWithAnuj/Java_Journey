@@ -1,22 +1,42 @@
 package Java_Programs._23_OOPs_Constructors;
 
-public class P122_OOPs_DefaultConstructor {
-    public static void main(String[] args) {
-        Car c1 = new Car();
-        System.out.println(c1.name); //it will give us null if no constructor
-        System.out.println(c1.year); //it will give us 0 if no constructor
-        System.out.println(c1.model); //it will give us null if no constructor
-        //so let us initialized them into the constructors and their value will change
-        //Every object will have the same default constructor no matter what you create
-    }
-}
-class Car{
+// Car class
+class Car {
+
+    // Instance variables (attributes)
     String name;
     int year;
     String model;
-    Car(){
+
+    // Default constructor
+    Car() {
+
+        // Constructor is used to initialise instance variables
+        // This code runs automatically when an object is created
+
         name = "Anuj";
         year = 2024;
         model = "xyz";
+    }
+}
+
+public class P122_OOPs_DefaultConstructor {
+
+    public static void main(String[] args) {
+
+        // Creating an object of Car class
+        Car c1 = new Car();
+        // 👉 Default constructor is called automatically
+
+        // Printing instance variable values
+        System.out.println(c1.name);   // "Anuj"
+        System.out.println(c1.year);   // 2024
+        System.out.println(c1.model);  // "xyz"
+
+        // NOTE:
+        // If we had NOT written a constructor:
+        // name  → null
+        // year  → 0
+        // model → null
     }
 }
