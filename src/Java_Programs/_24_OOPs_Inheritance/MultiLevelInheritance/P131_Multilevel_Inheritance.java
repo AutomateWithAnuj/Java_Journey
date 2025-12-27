@@ -25,8 +25,10 @@ public class P131_Multilevel_Inheritance {
 
         // 4️⃣ Child object with Parent reference (Upcasting) — VALID
         Grandfather gf2 = new Son();
-        // gf2.sonHouse(); // ❌ Cannot access child-specific methods
+        // gf2.sonHouse(); // ❌ Cannot access child-specific (non-overriden) methods
         gf2.familyHome();  // ✅ Calls Son's overridden method (runtime polymorphism)
+        // Calling non-overridden method
+        gf2.grandfatherHouse();
 
         // 5️⃣ Parent reference with Parent object
         Grandfather gf3 = new Father();
@@ -37,10 +39,8 @@ public class P131_Multilevel_Inheritance {
         f4.familyHome();   // Calls Son's overridden method
 
         // NOTE:
-        // Method call depends on OBJECT type, not REFERENCE type (for overridden methods)
+        // Method call depends on OBJECT type for the overridden methods, not REFERENCE type (for overridden methods)
         // Accessible methods depend on REFERENCE type
 
-        // Calling non-overridden method
-        gf2.grandfatherHouse();
     }
 }
