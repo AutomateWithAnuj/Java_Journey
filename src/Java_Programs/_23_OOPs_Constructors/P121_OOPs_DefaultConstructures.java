@@ -1,37 +1,52 @@
 package Java_Programs._23_OOPs_Constructors;
 
-public class P121_OOPs_DefaultConstructures {
-    public static void main(String[] args) {
-        //before doing anything if you want to do anything you can do it in constructor
-        Baby b1 =  new Baby();
-        //whenever an object is created it will automatically call the default constructor
-        new Baby();
-        //till now that default constructor has been called twice
-        Baby b2; //for this contractor will not be called because object not created
-        //Default constructors first assign default values to the all the attributes in program
-    }
-}
-class Baby{
-    //Attribute
-    String name;
-    //Behaviour
-    void cry(){
+// Baby class
+class Baby {
+
+    // Instance variable (attribute)
+    String name;  
+    // 👉 Default value is null (assigned automatically by JVM)
+
+    // Instance methods (behaviour)
+    void cry() {
         System.out.println("Cry!!");
     }
-    void sleep(){
+
+    void sleep() {
         System.out.println("Sleep!");
     }
-    void eat(){
+
+    void eat() {
         System.out.println("Eat!!");
     }
-    Baby(){
-        //By default, java has the default constructor also even if you don't create it will be still their
-        //you can write also by yourself so if it is written it will consider that as the default constructor
-        //so we write default constructor only when we want it to be executed for something written in it
-        System.out.println("I am default constructor");
-        //Fetch data from mysql database
-        //Read from CSV File, XLSX
-        //Open a file and read the data (json, test_data.xlsx, text file)
+
+    // Default constructor
+    Baby() {
+
+        // This constructor is called automatically whenever
+        // an object of Baby class is created
+
+        System.out.println("I am the default constructor");
     }
 
+public class P121_OOPs_DefaultConstructors {
+
+    public static void main(String[] args) {
+
+        // When an object is created using 'new', the constructor is called automatically
+        Baby b1 = new Baby();  
+        // 👉 Default constructor is called here (1st time)
+
+        // Creating an object without assigning it to a variable
+        // Constructor will still be called
+        new Baby();            
+        // 👉 Default constructor is called here (2nd time)
+
+        // Only declaring a reference variable
+        // No object is created, so constructor is NOT called
+        Baby b2;               
+
+        // NOTE:
+        // Constructor is called ONLY when an object is created using 'new'
+    }
 }
