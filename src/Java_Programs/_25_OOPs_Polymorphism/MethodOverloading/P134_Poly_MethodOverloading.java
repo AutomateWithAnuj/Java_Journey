@@ -1,26 +1,44 @@
 package Java_Programs._25_OOPs_Polymorphism.MethodOverloading;
 
 public class P134_Poly_MethodOverloading {
+
     public static void main(String[] args) {
-        MathOperations m = new MathOperations();
-        int S1 = m.add(2,3);
-        float S2 = m.add(3.7f,5.9f);
-        int S3 = m.add(2,3,4);
-        System.out.println("S1: "+S1+", S2: "+S2+", S3: "+S3);
+
+        // Creating object of MathOperations class
+        MathOperations math = new MathOperations();
+
+        // Calling overloaded add() methods
+        int sum1 = math.add(2, 3);              // calls add(int, int)
+        float sum2 = math.add(3.7f, 5.9f);      // calls add(float, float)
+        int sum3 = math.add(2, 3, 4);            // calls add(int, int, int)
+
+        // Printing results
+        System.out.println("Sum of 2 integers        : " + sum1);
+        System.out.println("Sum of 2 float numbers   : " + sum2);
+        System.out.println("Sum of 3 integers        : " + sum3);
     }
 }
 
-class MathOperations{
-    //In the same class
-    //if you have methods with same name but with different arguments or return types
-    int add(int a, int b){
-        return a+b;
-    }
-    float add(float a,float b){
-        return a+b;
-    }
-    int add(int a, int b, int c){
-        return a+b+c;
+/*
+ * This class demonstrates Method Overloading
+ * - Same method name: add()
+ * - Different parameter lists
+ * - Resolved at compile time
+ */
+class MathOperations {
+
+    // Adds two integers
+    int add(int a, int b) {
+        return a + b;
     }
 
+    // Adds two float values
+    float add(float a, float b) {
+        return a + b;
+    }
+
+    // Adds three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
 }
