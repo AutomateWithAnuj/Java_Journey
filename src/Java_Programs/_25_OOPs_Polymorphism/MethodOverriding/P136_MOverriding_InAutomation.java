@@ -1,34 +1,60 @@
 package Java_Programs._25_OOPs_Polymorphism.MethodOverriding;
 
+/*
+ * Base class
+ * Contains common behaviour for all browsers
+ */
+class CommonToAll {
+
+    void openBrowser() {
+        System.out.println("Open the default browser (IE)");
+    }
+}
+
+/*
+ * Chrome-specific test case
+ */
+class ChromeTC extends CommonToAll {
+
+    @Override
+    void openBrowser() {
+        System.out.println("Open the Chrome Browser");
+    }
+}
+
+/*
+ * Firefox-specific test case
+ */
+class FireFoxTC extends CommonToAll {
+
+    @Override
+    void openBrowser() {
+        System.out.println("Open the Firefox Browser");
+    }
+}
+
+
 public class P136_MOverriding_InAutomation {
+
     public static void main(String[] args) {
-        ChromeTC c1 = new ChromeTC();
-        c1.openBrowser();
-        FireFoxTC f1 = new FireFoxTC();
-        f1.openBrowser();
 
-        //Dynamic Dispatch
-        CommonToAll c2 = new ChromeTC();
-        c2.openBrowser();
+        // Case 1: Child reference → Child object
+        ChromeTC chrome = new ChromeTC();
+        chrome.openBrowser();   // Chrome implementation
 
-        //ChromeTC cf = new FireFoxTC();
+        FireFoxTC firefox = new FireFoxTC();
+        firefox.openBrowser();  // Firefox implementation
 
-    }
-}
-class CommonToAll{
-    void openBrowser(){
-        System.out.println("Open the IE Browser!");
-    }
-}
-class ChromeTC extends CommonToAll{
-    @Override
-    void openBrowser(){
-        System.out.println("Open the Chrome Browser!");
-    }
-}
-class FireFoxTC extends CommonToAll{
-    @Override
-    void openBrowser(){
-        System.out.println("Open the FireFox Browser!");
+        System.out.println("----------------------------");
+
+        // Case 2: Parent reference → Child object (Dynamic Method Dispatch)
+        CommonToAll browser1 = new ChromeTC();
+        browser1.openBrowser(); // Chrome version executes
+
+        CommonToAll browser2 = new FireFoxTC();
+        browser2.openBrowser(); // Firefox version executes
+
+        // ❌ Not allowed: Parent object cannot be assigned to child reference
+        // ChromeTC cf = new FireFoxTC(); // Compile-time error
     }
 }
