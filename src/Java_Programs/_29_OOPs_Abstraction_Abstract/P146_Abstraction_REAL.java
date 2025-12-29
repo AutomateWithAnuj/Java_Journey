@@ -38,6 +38,7 @@ abstract class Employee {
      */
     void mainCheck() {
         System.out.println("Mailing a check to " + name + " at " + address);
+        // OUTPUT: Mailing a check to Anuj at Delhi
     }
 }
 
@@ -87,6 +88,6 @@ public class P146_Abstraction_REAL {
         // Calling implemented abstract method
         double salary = emp.computePay();
         System.out.println("Salary = " + salary);
+        // OUTPUT: Salary = 50000.0
     }
 }
-
