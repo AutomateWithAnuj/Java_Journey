@@ -4,9 +4,31 @@ import Java_Programs._27_OOPs_AccessModifiers.police._140_Cop;
 
 public class P139_Thief {
     public static void main(String[] args) {
-        _140_Cop theif = new _140_Cop(100);
-        //theif.canIShoot(); //it shouldn't be allowed as the issue was they have made it public
-        //also it will not be accessible if we make canIShoot as private
-        //System.out.println(thief.gun);
+
+        // Thief creating Cop object (very suspicious 😄)
+        _140_Cop thief = new _140_Cop(100);
+
+        /*
+         * ❌ NOT ALLOWED:
+         * canIShoot() is PROTECTED
+         * Thief is:
+         * - Not in same package
+         * - Not a subclass
+         */
+        // thief.canIShoot();
+
+        /*
+         * ✔ ALLOWED:
+         * gun is PUBLIC
+         * Public members are accessible everywhere
+         */
+        System.out.println(thief.gun);
+
+        /*
+         * ❌ NOT ALLOWED:
+         * iCard is DEFAULT
+         * Default access → same package only
+         */
+        // System.out.println(thief.iCard);
     }
 }
