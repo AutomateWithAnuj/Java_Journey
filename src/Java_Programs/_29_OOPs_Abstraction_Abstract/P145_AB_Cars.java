@@ -52,16 +52,23 @@ public class P145_AB_Cars {
         // Creating object of concrete class i10
         i10 car = new i10();
 
-        // Calling methods defined by abstract class
-        car.startEngine();
-        car.stopEngine();
+        // Calling methods using child class reference
+        car.startEngine();  
+        // Output: i10 engine is starting...
+
+        car.stopEngine();   
+        // Output: i10 engine is stopping...
 
         /*
          * Abstract class reference pointing to child object
          * (Runtime Polymorphism)
          */
         Engine engine = new i10();
-        engine.startEngine();
-        engine.stopEngine();
+
+        engine.startEngine();  
+        // Output: i10 engine is starting...
+
+        engine.stopEngine();   
+        // Output: i10 engine is stopping...
     }
 }
