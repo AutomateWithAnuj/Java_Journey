@@ -1,19 +1,44 @@
 package Java_Programs._28_OOPs_SuperKeyword;
 
-public class P143_Super {
+// Parent class
+class Animal {
 
-}
-class Animal{
+    // Protected variable → accessible in child class
     protected String color = "White";
-    void sound(){
+
+    // Parent class method
+    void sound() {
         System.out.println("Animal Sound!");
     }
 }
-class Dog extends Animal{
+
+// Child class
+class Dog extends Animal {
+
+    // Child class variable with SAME NAME as parent
     private String color = "Black";
-    void display(){
-        System.out.println(this.color);
-        System.out.println(super.color);
-        super.sound();
+
+    void display() {
+
+        // this.color → refers to CURRENT class variable
+        System.out.println(this.color);   // Output: Black
+
+        // super.color → refers to PARENT class variable
+        System.out.println(super.color);  // Output: White
+
+        // super.sound() → calls PARENT class method
+        super.sound();                    // Output: Animal Sound!
+    }
+}
+
+
+public class P143_Super {
+    public static void main(String[] args) {
+
+        // Creating object of child class
+        Dog dog = new Dog();
+
+        // Calling child class method
+        dog.display();
     }
 }
