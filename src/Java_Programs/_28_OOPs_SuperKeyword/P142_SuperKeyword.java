@@ -1,62 +1,96 @@
 package Java_Programs._28_OOPs_SuperKeyword;
 
-public class P142_SuperKeyword {
-    public static void main(String[] args) {
-        Car c1 = new Car(100);
-        c1.display();
-    }
-}
-class Vehicle{
+class Vehicle {
+
+    // Parent class variable
     public int maxSpeed = 180;
 
+    // Getter
     public int getMaxSpeed() {
         return maxSpeed;
     }
 
+    // Setter
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
-    Vehicle(){
-        System.out.println("Default Constructor");
+    // Default constructor
+    Vehicle() {
+        System.out.println("Vehicle Default Constructor");
     }
-    Vehicle(int a){
-        System.out.println("Parameterized Constructor");
+
+    // Parameterized constructor
+    Vehicle(int a) {
+        System.out.println("Vehicle Parameterized Constructor");
     }
-    //Method Overloading Functions
-    void message(){
-        System.out.println("Method - No Return Type, No Arguments");
+
+    // Method overloading
+    void message() {
+        System.out.println("Vehicle Message: No arguments");
     }
-    void message(int a){
-        System.out.println("Method with Arguments");
+
+    void message(int a) {
+        System.out.println("Vehicle Message: With argument");
     }
-    //Normal Functions
-    void display(){
-        System.out.println("Vehicle Parent Method");
+
+    // Normal method
+    void display() {
+        System.out.println("Vehicle Parent Display Method");
     }
 }
 
-class Car extends Vehicle{
-    private int maxSpeed = 281;
-    Car(){
-        super(); //to access the parents default constructors
-    }
-    Car(int a){
-        super(a); //to access the parents parameterized constructors
-    }
-    //Method Overriding
-    @Override
-    void display(){
-        System.out.println(this.maxSpeed); //this class max speed
+class Car extends Vehicle {
 
-        //Calling Parents Methods and Attributes
-        System.out.println(super.maxSpeed); //parents max speed
+    // Child class variable (same name as parent)
+    private int maxSpeed = 281;
+
+    // Default constructor
+    Car() {
+        super(); // calls Vehicle's default constructor
+    }
+
+    // Parameterized constructor
+    Car(int a) {
+        super(a); // calls Vehicle's parameterized constructor
+    }
+
+    // Method overriding
+    @Override
+    void display() {
+
+        // this → current (child) class variable
+        System.out.println(this.maxSpeed);
+
+        // super → parent class variable
+        System.out.println(super.maxSpeed);
+
+        // Calling parent class methods
         super.message();
         super.message(10);
 
-        //Now calling parents constructors
-
-
-        System.out.println("Vehicle Overridden Child Method");
+        System.out.println("Car Overridden Display Method");
     }
 }
+
+
+public class P142_SuperKeyword {
+    public static void main(String[] args) {
+
+        // Creating Car object
+        Car c1 = new Car(100);
+
+        // Calling overridden method
+        c1.display();
+    }
+}
+
+//output flow
+/*
+Vehicle Parameterised Constructor
+281
+180
+Vehicle Message: No arguments
+Vehicle Message: With argument
+Car Overridden Display Method
+*/
