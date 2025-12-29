@@ -84,6 +84,7 @@ public class P146_Abstraction_REAL {
 
         // Calling concrete method from abstract class
         emp.mainCheck();
+        // Mailing a check to Anuj at Delhi
 
         // Calling implemented abstract method
         double salary = emp.computePay();
