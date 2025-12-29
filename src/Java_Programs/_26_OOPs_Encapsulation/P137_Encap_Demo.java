@@ -34,4 +34,34 @@ class GoodVWOLogin {
 
     // Constructor initializes data safely
     GoodVWOLogin(String usr, String pwd) {
-        this.us
+        this.username = usr;
+        this.password = pwd;
+    }
+
+    // Getter → READ access
+    public String getUsername() {
+        return username;
+    }
+
+    // Setter → WRITE access with control
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    // Getter for password (read-only)
+    public String getPassword() {
+        return password;
+    }
+
+    /*
+     * Setter for password
+     * Only ADMIN is allowed to change password
+     */
+    public void setPassword(String password, boolean isAdmin) {
+        if (isAdmin) {
+            this.password = password;
+        } else {
+            System.out.println("Not allowed to change password");
+        }
+    }
+}
