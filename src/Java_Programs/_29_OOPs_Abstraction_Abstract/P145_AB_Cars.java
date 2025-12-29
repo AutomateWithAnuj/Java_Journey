@@ -1,35 +1,6 @@
 package Java_Programs._29_OOPs_Abstraction_Abstract;
 
 /*
- * This program demonstrates ABSTRACTION using an ABSTRACT CLASS.
- *
- * Real-life scenario:
- * - An Engine defines what actions a car must perform
- * - How the engine starts or stops is hidden from the user
- */
-
-public class P145_AB_Cars {
-
-    public static void main(String[] args) {
-
-        // Creating object of concrete class i10
-        i10 car = new i10();
-
-        // Calling methods defined by abstract class
-        car.startEngine();
-        car.stopEngine();
-
-        /*
-         * Abstract class reference pointing to child object
-         * (Runtime Polymorphism)
-         */
-        Engine engine = new i10();
-        engine.startEngine();
-        engine.stopEngine();
-    }
-}
-
-/*
  * Abstract class Engine
  *
  * - Acts as a blueprint for all car engines
@@ -62,5 +33,35 @@ class i10 extends Engine {
     @Override
     void stopEngine() {
         System.out.println("i10 engine is stopping...");
+    }
+}
+
+
+/*
+ * This program demonstrates ABSTRACTION using an ABSTRACT CLASS.
+ *
+ * Real-life scenario:
+ * - An Engine defines what actions a car must perform
+ * - How the engine starts or stops is hidden from the user
+ */
+
+public class P145_AB_Cars {
+
+    public static void main(String[] args) {
+
+        // Creating object of concrete class i10
+        i10 car = new i10();
+
+        // Calling methods defined by abstract class
+        car.startEngine();
+        car.stopEngine();
+
+        /*
+         * Abstract class reference pointing to child object
+         * (Runtime Polymorphism)
+         */
+        Engine engine = new i10();
+        engine.startEngine();
+        engine.stopEngine();
     }
 }
