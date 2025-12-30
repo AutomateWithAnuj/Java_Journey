@@ -1,36 +1,6 @@
 package Java_Programs._30_OOPs_Abstraction_Interfaces;
 
 /*
- * This class contains the main method.
- * Execution of the program starts from here.
- */
-public class P147_Interface {
-
-    public static void main(String[] args) {
-
-        // Creating object of Rectangle class
-        // Reference type is the implementing class
-        Rectangle rectangle = new Rectangle();
-
-        // Calling getArea() method for rectangle
-        // length = 10, breadth = 10
-        rectangle.getArea(10, 10);
-        // Expected Output:
-        // The area of Rectangle is: 100
-
-
-        // Creating object of Triangle class
-        Triangle triangle = new Triangle();
-
-        // Calling getArea() method for triangle
-        // base = 3, height = 4
-        triangle.getArea(3, 4);
-        // Expected Output:
-        // The area of Triangle is: 6.0
-    }
-}
-
-/*
  * Polygon is an interface.
  * It defines a contract for all polygon shapes.
  * Any class that implements this interface MUST implement getArea().
@@ -78,5 +48,35 @@ class Triangle implements Polygon {
     public void getArea(int base, int height) {
         double area = 0.5 * base * height;
         System.out.println("The area of Triangle is: " + area);
+    }
+}
+
+/*
+ * This class contains the main method.
+ * Execution of the program starts from here.
+ */
+public class P147_Interface {
+
+    public static void main(String[] args) {
+
+        // Creating object of Rectangle class
+        // Reference type is the implementing class
+        Rectangle rectangle = new Rectangle();
+
+        // Calling getArea() method for rectangle
+        // length = 10, breadth = 10
+        rectangle.getArea(10, 10);
+        // Expected Output:
+        // The area of Rectangle is: 100
+
+
+        // Creating object of Triangle class
+        Triangle triangle = new Triangle();
+
+        // Calling getArea() method for triangle
+        // base = 3, height = 4
+        triangle.getArea(3, 4);
+        // Expected Output:
+        // The area of Triangle is: 6.0
     }
 }
