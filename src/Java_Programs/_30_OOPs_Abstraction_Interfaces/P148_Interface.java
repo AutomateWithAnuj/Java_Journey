@@ -1,50 +1,109 @@
 package Java_Programs._30_OOPs_Abstraction_Interfaces;
 
-import java.util.Calendar;
+/*
+ * Brakes interface defines braking behavior.
+ * It only tells WHAT needs to be done.
+ */
+interface Brakes {
 
-public class P148_Interface {
-    public static void main(String[] args) {
-        car c = new car();
-        c.Drive(); //so by having this we know that everything is hidden then also we can apply all functionality
-        //this is called abstraction nothing you can see but you can have the functionality
-    }
+    // Method to apply brakes
+    void applyBrakes();
 }
-interface Brakes{
-    void applyBreak();
-}
-interface Engine{
+
+/*
+ * Engine interface defines engine-related behavior.
+ * It represents another capability of the car.
+ */
+interface Engine {
+
+    // Method to start the engine
     void startEngine();
+
+    // Method to stop the engine
     void stopEngine();
-    void applyBreaks();
-    default void test(){
-        System.out.println("concrete complete");
+
+    /*
+     * Default method (Java 8+ feature)
+     * Interface can have method implementation using default keyword
+     */
+    default void engineTest() {
+        System.out.println("Engine test completed");
     }
 }
-class car implements Brakes,Engine{
 
-    @Override
-    public void applyBreak() {
+/*
+ * Car class implements both Engine and Brakes interfaces.
+ * This demonstrates multiple inheritance using interfaces.
+ */
+class Car implements Engine, Brakes {
 
-    }
-
+    /*
+     * Implementation of startEngine() from Engine interface
+     */
     @Override
     public void startEngine() {
-        System.out.println("Apply Brakes");
+        System.out.println("Engine started");
     }
 
+    /*
+     * Implementation of stopEngine() from Engine interface
+     */
     @Override
     public void stopEngine() {
-        System.out.println("Apply Brakes");
+        System.out.println("Engine stopped");
     }
 
+    /*
+     * Implementation of applyBrakes() from Brakes interface
+     */
     @Override
-    public void applyBreaks() {
-        System.out.println("Apply Brakes");
+    public void applyBrakes() {
+        System.out.println("Brakes applied");
     }
 
-    void Drive(){
+    /*
+     * High-level method exposed to the user.
+     * User only calls drive(), not individual engine or brake methods.
+     * This is a perfect example of Abstraction.
+     */
+    public void drive() {
+
+        // Start the car
         startEngine();
-        applyBreak();
-        startEngine();
+
+        // Car is moving
+        System.out.println("Car is moving");
+
+        // Apply brakes
+        applyBrakes();
+
+        // Stop the engine
+        stopEngine();
+    }
+}
+
+/*
+ * This class contains the main method.
+ * Program execution starts from here.
+ */
+public class P148_Interface {
+
+    public static void main(String[] args) {
+
+        // Creating an object of Car class
+        // We are only calling high-level operations
+        // Internal working is hidden (Abstraction)
+        Car car = new Car();
+
+        // Calling the drive method
+        car.drive();
+
+        /*
+         * Expected Output:
+         * Engine started
+         * Car is moving
+         * Brakes applied
+         * Engine stopped
+         */
     }
 }
