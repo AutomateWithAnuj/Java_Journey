@@ -1,23 +1,6 @@
 package Java_Programs._31_InstanceInitializationBlock;
 
 /**
- * Main class to demonstrate Instance Initialization Block (IIB)
- */
-public class InstanceInitializationDemo {
-
-    /**
-     * Main method
-     * 
-     * - Program execution starts here
-     * - Creating an object of SampleClass
-     * - This automatically triggers IIBs and then the constructor
-     */
-    public static void main(String[] args) {
-        SampleClass obj = new SampleClass();
-    }
-}
-
-/**
  * SampleClass
  * 
  * Demonstrates how Instance Initialization Blocks (IIB)
@@ -53,5 +36,22 @@ class SampleClass {
      */
     public SampleClass() {
         System.out.println("I am the default constructor");
+    }
+}
+
+/**
+ * Main class to demonstrate Instance Initialization Block (IIB)
+ */
+public class InstanceInitializationDemo {
+
+    /**
+     * Main method
+     * 
+     * - Program execution starts here
+     * - Creating an object of SampleClass
+     * - This automatically triggers IIBs and then the constructor
+     */
+    public static void main(String[] args) {
+        SampleClass obj = new SampleClass();
     }
 }
