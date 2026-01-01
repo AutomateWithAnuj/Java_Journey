@@ -31,8 +31,25 @@ public enum P159_ENUM_Locators {
         return this.locator;
     }
 }
-package Java_Programs._33_Enum;
 
+/*
+🔹 What it is
+An advanced enum
+Each enum constant has:
+A value ("#btn", "#input1")
+A constructor
+A getter method
+🔹 What it stores
+A key–value pair
+PAGE_BUTTON → "#btn"
+PAGE_INPUT → "#input1"
+🔹 Typical use case
+Automation frameworks=
+UI locators
+URLs
+Config values
+Anything constant + associated data
+*/
 /*
  * This class contains the main() method.
  * It demonstrates how to use the ENUM
