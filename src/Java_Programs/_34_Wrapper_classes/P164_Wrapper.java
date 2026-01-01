@@ -6,40 +6,57 @@ package Java_Programs._34_Wrapper_classes;
  */
 class ATB1 {
 
-    // Wrapper classes are non-primitive data types (objects)
-    // They allow attributes and behaviors (methods)
-    String name;        // String is already a non-primitive (object)
+    // Wrapper classes (objects) instead of primitives
+    String name;        // Non-primitive (object)
     Long phone;         // Wrapper for long
     Integer age;        // Wrapper for int
     Double salary;      // Wrapper for double
     Float gst;          // Wrapper for float
     Boolean isMarried;  // Wrapper for boolean
 
-    /*
-     * Why wrapper classes are used:
-     * - Primitives are simple data types
-     * - Wrapper classes are objects
-     * - Objects can have attributes and behaviors
-     * - Wrapper classes allow operations like conversion to String,
-     *   hex value, comparison, etc.
-     */
-
-    // Note:
-    // As technology evolves, older approaches (primitives where objects are needed)
-    // are replaced by wrapper classes to support object-oriented features.
+    // Method to display all details
+    void displayDetails() {
+        System.out.println("Name: " + name);          // prints name
+        System.out.println("Phone: " + phone);        // prints phone number
+        System.out.println("Age: " + age);            // prints age
+        System.out.println("Salary: " + salary);      // prints salary
+        System.out.println("GST: " + gst);             // prints GST
+        System.out.println("Married: " + isMarried);  // prints marital status
+    }
 }
 
 /**
- * Entry class to demonstrate the usage of Wrapper classes.
- * Currently contains only the main method.
+ * Entry class to demonstrate practical usage
+ * of Wrapper classes.
  */
 public class P164_Wrapper {
 
     /**
      * Program execution starts from here.
-     * No execution logic is added intentionally.
      */
     public static void main(String[] args) {
-        // No code here – this class is only for structure/demo purposes
+
+        // Creating object of ATB1 class
+        ATB1 emp = new ATB1();
+
+        // Assigning values using Wrapper classes
+        emp.name = "Anuj";
+        emp.phone = 9876543210L;
+        emp.age = 25;
+        emp.salary = 55000.75;
+        emp.gst = 18.0f;
+        emp.isMarried = false;
+
+        // Displaying stored values
+        emp.displayDetails();
+        /*
+         Output:
+         Name: Anuj
+         Phone: 9876543210
+         Age: 25
+         Salary: 55000.75
+         GST: 18.0
+         Married: false
+        */
     }
 }
