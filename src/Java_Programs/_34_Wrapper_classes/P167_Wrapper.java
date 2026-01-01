@@ -122,7 +122,7 @@ class Mobile extends OldPhone {
  * - Static members
  * - Interface implementation
  */
-public class P167_Wrapper {
+public class P167_WrapperClasses_With_Inheritance {
 
     /**
      * Program execution starts here.
