@@ -50,21 +50,5 @@ URLs
 Config values
 Anything constant + associated data
 */
-/*
- * This class contains the main() method.
- * It demonstrates how to use the ENUM
- * and access its stored locator values.
- */
-public class P159_ENUM_Locators_Execution {
 
-    public static void main(String[] args) {
-
-        // Printing locator for button element
-        System.out.println(P159_ENUM_Locators.PAGE_BUTTON.getLocator());
-        // Output: #btn
-
-        // Printing locator for input element
-        System.out.println(P159_ENUM_Locators.PAGE_INPUT.getLocator());
-        // Output: #input1
-    }
-}
+//main method is inside next program P160_ENUM_Execution.java
