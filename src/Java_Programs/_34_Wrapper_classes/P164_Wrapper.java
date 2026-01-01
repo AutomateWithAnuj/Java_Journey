@@ -1,22 +1,45 @@
 package Java_Programs._34_Wrapper_classes;
 
+/**
+ * Entry class to demonstrate the usage of Wrapper classes.
+ * Currently contains only the main method.
+ */
 public class P164_Wrapper {
-    public static void main(String[] args) {
 
+    /**
+     * Program execution starts from here.
+     * No execution logic is added intentionally.
+     */
+    public static void main(String[] args) {
+        // No code here – this class is only for structure/demo purposes
     }
 }
-class  ATB1{
-    //wrapper also means non primitive datatypes
-    String name;
-    Long phone;
-    Integer age;
-    Double salary;
-    Float GST;
-    Boolean isMarried;
 
-    // Primitive are normal datatypes
-    // Wrapper -> Object -> attribute, behaviour
-    // To convert any value to String, hexValue ..etc we can now do that
+/**
+ * This class demonstrates how wrapper classes
+ * are used as object data types in real-world scenarios.
+ */
+class ATB1 {
 
-    //when something new comes in market we replace our old things by that
+    // Wrapper classes are non-primitive data types (objects)
+    // They allow attributes and behaviors (methods)
+    String name;        // String is already a non-primitive (object)
+    Long phone;         // Wrapper for long
+    Integer age;        // Wrapper for int
+    Double salary;      // Wrapper for double
+    Float gst;          // Wrapper for float
+    Boolean isMarried;  // Wrapper for boolean
+
+    /*
+     * Why wrapper classes are used:
+     * - Primitives are simple data types
+     * - Wrapper classes are objects
+     * - Objects can have attributes and behaviors
+     * - Wrapper classes allow operations like conversion to String,
+     *   hex value, comparison, etc.
+     */
+
+    // Note:
+    // As technology evolves, older approaches (primitives where objects are needed)
+    // are replaced by wrapper classes to support object-oriented features.
 }
