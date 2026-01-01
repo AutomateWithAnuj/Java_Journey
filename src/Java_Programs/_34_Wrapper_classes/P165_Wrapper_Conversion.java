@@ -17,7 +17,7 @@ public class P165_Wrapper_Conversion {
         // Primitive value is automatically converted into a Wrapper object
         Integer b = 10;
 
-        // Using a behavior (method) of the Wrapper class
+        // Using a behaviour (method) of the Wrapper class
         System.out.println(b.intValue()); 
         // Output: 10 (Wrapper Integer converted back to primitive int)
 
@@ -30,7 +30,7 @@ public class P165_Wrapper_Conversion {
 
         // Unboxing (Auto-unboxing)
         // Wrapper object is automatically converted into a primitive value
-        // Attributes and behaviors of the wrapper are no longer available
+        // Attributes and behaviours of the wrapper are no longer available
         int v = a2;
 
         System.out.println(v); 
