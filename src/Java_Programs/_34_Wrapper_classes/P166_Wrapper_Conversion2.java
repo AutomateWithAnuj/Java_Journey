@@ -14,12 +14,12 @@ public class P166_Wrapper_Conversion2 {
         // String containing a numeric value
         String num = "10";
 
-        // Converting String to Wrapper using parseInt()
+        // 1. Converting String to Wrapper using parseInt()
         // parseInt() converts String to primitive int,
         // which is then automatically boxed to Integer
         Integer a = Integer.parseInt(num); // Way 1
 
-        // Converting String directly to Wrapper using valueOf()
+        // 2. Converting String directly to Wrapper using valueOf()
         Integer b = Integer.valueOf(num);  // Way 2
 
         // Converting Wrapper to String using toString()
