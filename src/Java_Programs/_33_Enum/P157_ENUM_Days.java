@@ -1,7 +1,7 @@
 package Java_Programs._33_Enum;
 
 /*
- * This class uses a String array to store days.
+ * class A uses a String array to store days.
  * This approach is NOT recommended because:
  * - Values can be modified accidentally
  * - No type safety
