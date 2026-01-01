@@ -32,3 +32,23 @@ public enum P161_ENUM_Colors {
         return this.hexCode;
     }
 }
+package Java_Programs._33_Enum;
+
+public class P162_ENUM_Execution {
+
+    public static void main(String[] args) {
+
+        // Access individual enum constants
+        System.out.println("Red HEX  : " + P161_ENUM_Colors.RED.getHexCode());
+        System.out.println("Green HEX: " + P161_ENUM_Colors.GREEN.getHexCode());
+        System.out.println("Blue HEX : " + P161_ENUM_Colors.BLUE.getHexCode());
+        System.out.println("Yellow HEX: " + P161_ENUM_Colors.YELLOW.getHexCode());
+
+        System.out.println("\n---- Using loop ----");
+
+        // Iterate through all enum constants
+        for (P161_ENUM_Colors color : P161_ENUM_Colors.values()) {
+            System.out.println(color + " -> " + color.getHexCode());
+        }
+    }
+}
