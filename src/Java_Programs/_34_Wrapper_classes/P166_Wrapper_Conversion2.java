@@ -1,24 +1,40 @@
 package Java_Programs._34_Wrapper_classes;
 
+/**
+ * Demonstrates different conversions using Wrapper classes.
+ * Focuses on String, primitive, and Wrapper conversions.
+ */
 public class P166_Wrapper_Conversion2 {
+
+    /**
+     * Program execution starts here.
+     */
     public static void main(String[] args) {
+
+        // String containing a numeric value
         String num = "10";
-        //convert this primitive datatype to integer
-        //there is no way we have to use the wrapper classes
 
-        //String to wrapper we can use parseX()
-        Integer a = Integer.parseInt(num); //way1
-        Integer b = Integer.valueOf(num);  //way2
+        // Converting String to Wrapper using parseInt()
+        // parseInt() converts String to primitive int,
+        // which is then automatically boxed to Integer
+        Integer a = Integer.parseInt(num); // Way 1
 
-        //wrapper to string
-        System.out.println(a.toString());
+        // Converting String directly to Wrapper using valueOf()
+        Integer b = Integer.valueOf(num);  // Way 2
 
-        //integer to string
-        int a2 = 10;
+        // Converting Wrapper to String using toString()
+        System.out.println(a.toString());  
+        // Output: "10"
 
-        //Primitive to String
+        // Primitive integer value
+        int a2 = 10; // (shown for understanding primitive usage)
+
+        // Primitive to Wrapper (Autoboxing)
         int age = 10;
-        Integer age_wrapper = age;
-        System.out.println(age_wrapper.toString());
+        Integer ageWrapper = age;
+
+        // Converting Wrapper to String
+        System.out.println(ageWrapper.toString()); 
+        // Output: "10"
     }
 }
