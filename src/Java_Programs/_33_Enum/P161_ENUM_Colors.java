@@ -34,7 +34,7 @@ public enum P161_ENUM_Colors {
 }
 package Java_Programs._33_Enum;
 
-public class P162_ENUM_Execution {
+public class P161_ENUM_Execution {
 
     public static void main(String[] args) {
 
