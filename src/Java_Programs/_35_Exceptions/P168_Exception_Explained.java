@@ -1,25 +1,49 @@
 package Java_Programs._35_Exceptions;
 
+/**
+ * Demonstrates how multiple runtime exceptions
+ * can be handled using a single try-catch block.
+ */
 public class P168_Exception_Explained {
+
+    /**
+     * Program execution starts here.
+     * Command-line arguments are used as input.
+     */
     public static void main(String[] args) {
+
         try {
+            // Indicates the start of program execution
             System.out.println("Starting the program");
-            String input_user = args[0];
-            int a = Integer.parseInt(input_user);
-            int output = 100/a;
+            // Output: Starting the program
+
+            // Reading first command-line argument
+            // May throw ArrayIndexOutOfBoundsException if no input is provided
+            String userInput = args[0];
+
+            // Converting String input to integer
+            // May throw NumberFormatException if input is not a valid number
+            int a = Integer.parseInt(userInput);
+
+            // Performing division
+            // May throw ArithmeticException if a is 0
+            int output = 100 / a;
+
+            // Printing final result if no exception occurs
             System.out.println(output);
-            //problems with this program
-            //1. if you will not give any value you will get ArrayIndexOutOfBoundsException
-            //2. if you will give 0 as value ArithmeticException: / by zero exception
-            //3. if you will give non integer value it will give NumberFormatException
+            // Output: result of 100 / a
 
-            //so this has 3 major problems these are the exceptions and we have to handle it
-            //exception handling is responsible to give the best experience to user
-        } catch (ArrayIndexOutOfBoundsException | ArithmeticException | NumberFormatException e) {
-            //you may think that these Exceptions Objects we are not making
-            //ArithmeticException e1 = new ArithmeticException(); //it is already done by JVM for us
+        } catch (ArrayIndexOutOfBoundsException 
+               | ArithmeticException 
+               | NumberFormatException e) {
+
+            // JVM automatically creates the exception object
+            // e.getMessage() gives a clear reason for the failure
             System.out.println(e.getMessage());
+            // Possible Outputs:
+            // - Index 0 out of bounds for length 0
+            // - / by zero
+            // - For input string: "abc"
         }
-
     }
 }
