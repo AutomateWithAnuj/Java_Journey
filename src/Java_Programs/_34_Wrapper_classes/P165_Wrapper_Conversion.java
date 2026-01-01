@@ -1,16 +1,39 @@
 package Java_Programs._34_Wrapper_classes;
 
+/**
+ * Demonstrates Boxing and Unboxing using Wrapper classes.
+ */
 public class P165_Wrapper_Conversion {
+
+    /**
+     * Program execution starts here.
+     */
     public static void main(String[] args) {
+
+        // Primitive variable
         int a = 10;
-        Integer b = 10; //This is called as Boxing
-        //By using boxing JVM automatically will store the value primitive to wrapper
-        System.out.println(b.intValue()); //Behaviour
-        System.out.println(Integer.MIN_VALUE);
+
+        // Boxing (Autoboxing)
+        // Primitive value is automatically converted into a Wrapper object
+        Integer b = 10;
+
+        // Using a behavior (method) of the Wrapper class
+        System.out.println(b.intValue()); 
+        // Output: 10 (Wrapper Integer converted back to primitive int)
+
+        // Accessing a constant provided by the Wrapper class
+        System.out.println(Integer.MIN_VALUE); 
+        // Output: -2147483648 (minimum value of int)
+
+        // Wrapper object holding an int value
         Integer a2 = 42;
-        int v = a2; //This is called as unBoxing
-        //Unboxing means wrapper is removed and attributes and behaviours are lost
-        System.out.println(v);
-        //java loves to put everything in the heap area
+
+        // Unboxing (Auto-unboxing)
+        // Wrapper object is automatically converted into a primitive value
+        // Attributes and behaviors of the wrapper are no longer available
+        int v = a2;
+
+        System.out.println(v); 
+        // Output: 42
     }
 }
