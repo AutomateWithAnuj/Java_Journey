@@ -1,6 +1,35 @@
 package Java_Programs._34_Wrapper_classes;
 
 /**
+ * Interface representing SIM card behavior.
+ */
+interface SIMCard {
+
+    // Abstract method to be implemented by classes
+    void enterCard();
+}
+
+
+/**
+ * Parent class representing old phone functionality.
+ */
+class OldPhone implements SIMCard {
+
+    // Method to simulate calling from old phone
+    void calling() {
+        System.out.println("DialPad");
+        // Output: DialPad
+    }
+
+    // Implementing interface method
+    @Override
+    public void enterCard() {
+        System.out.println("Card entered");
+        // Output: Card entered
+    }
+}
+
+/**
  * Mobile class extending OldPhone and using Wrapper classes
  * to represent attributes as objects.
  */
@@ -81,34 +110,6 @@ class Mobile extends OldPhone {
         System.out.println("Change price in decimals");
         // Output: Change price in decimals
     }
-}
-
-/**
- * Parent class representing old phone functionality.
- */
-class OldPhone implements SIMCard {
-
-    // Method to simulate calling from old phone
-    void calling() {
-        System.out.println("DialPad");
-        // Output: DialPad
-    }
-
-    // Implementing interface method
-    @Override
-    public void enterCard() {
-        System.out.println("Card entered");
-        // Output: Card entered
-    }
-}
-
-/**
- * Interface representing SIM card behavior.
- */
-interface SIMCard {
-
-    // Abstract method to be implemented by classes
-    void enterCard();
 }
 
 /**
