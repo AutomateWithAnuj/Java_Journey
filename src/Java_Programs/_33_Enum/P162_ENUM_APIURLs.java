@@ -32,3 +32,23 @@ public enum P162_ENUM_APIURLs {
         return this.url;
     }
 }
+
+package Java_Programs._33_Enum;
+
+public class P163_ENUM_APIURLs_Execution {
+
+    public static void main(String[] args) {
+
+        // Access single URL
+        System.out.println("VWO URL     : " + P162_ENUM_APIURLs.VWO.getURL());
+        System.out.println("Katalon URL : " + P162_ENUM_APIURLs.KATALON.getURL());
+        System.out.println("Google URL  : " + P162_ENUM_APIURLs.GOOGLE.getURL());
+
+        System.out.println("\n---- All API URLs ----");
+
+        // Loop through all enum values
+        for (P162_ENUM_APIURLs api : P162_ENUM_APIURLs.values()) {
+            System.out.println(api.name() + " -> " + api.getURL());
+        }
+    }
+}
