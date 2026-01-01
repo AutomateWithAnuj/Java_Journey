@@ -1,26 +1,52 @@
 package Java_Programs._35_Exceptions;
 
+/*
+ * Junior QA–style exception handling example.
+ * Demonstrates handling multiple exceptions step-by-step
+ * without stopping the program flow.
+ */
 public class P177_JrQA_ExcpHandling_1 {
+
     public static void main(String[] args) {
 
-        String ip = null; //ArrayIndexOutOfBoundsException
+        // Step 1: Read input from command-line arguments
+        String input = null; // May remain null if no argument is passed
+
         try {
-            ip = args[0];
+            input = args[0]; 
+            // Reads first command-line argument
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e.getMessage());
+            // Happens when no argument is provided
+            System.out.println(e.getMessage()); 
+            // Output example: Index 0 out of bounds for length 0
         }
-        int a = 0; //NumberFormatException
+
+        // Step 2: Convert String input to integer
+        int parsedValue = 0;
+
         try {
-            a = Integer.parseInt(ip);
+            parsedValue = Integer.parseInt(input); 
+            // Converts String to int
         } catch (NumberFormatException e) {
-            System.out.println(e.getMessage());
+            // Happens when input is null or not a valid integer
+            System.out.println(e.getMessage()); 
+            // Output example: For input string: "abc"
         }
-        int b = 0; //ArithmeticException
+
+        // Step 3: Perform division operation
+        int result = 0;
+
         try {
-            b = 100/a;
+            result = 100 / parsedValue; 
+            // Risky if parsedValue is 0
         } catch (ArithmeticException e) {
-            System.out.println(e.getMessage());
+            // Happens when dividing by zero
+            System.out.println(e.getMessage()); 
+            // Output example: / by zero
         }
-        System.out.println(b);
+
+        // Final output (executes regardless of exceptions)
+        System.out.println(result); 
+        // Output: 0 (if any exception occurred earlier)
     }
 }
