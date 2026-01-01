@@ -1,17 +1,31 @@
 package Java_Programs._35_Exceptions;
 
+/*
+ * Demonstrates multiple catch blocks and the importance
+ * of catching specific exceptions before generic ones.
+ */
 public class P172_Try_Catch {
+
     public static void main(String[] args) {
-        System.out.println("1");
+
+        // Simple print to show normal program flow before exception
+        System.out.println("1"); // Output: 1
+
         try {
-            int a = 10/0;
-        } /*catch (Exception e){ //larger bucket to catch and handle it
-            System.out.println("Rocket Launcher for killing a cockroach");
-        }*/ //we cannot use the bigger bucket first
-        //we cannot use Exception before Arithmetic Exception as then Arithmetic Exception will be of no use as the Exception can catch everything
-        catch (ArithmeticException e){ //smaller bucket to catch and handle it
-            System.out.println("Hit Spray for killing a cockroach");
-        } catch (Exception e){ //larger bucket to catch and handle it
+            // This line throws ArithmeticException (division by zero)
+            int value = 10 / 0;
+        }
+        /*
+         * Always catch more specific (smaller) exceptions first.
+         * If Exception is placed before ArithmeticException,
+         * the specific catch block becomes unreachable.
+         */
+        catch (ArithmeticException e) {
+            // Handles only ArithmeticException
+            System.out.println("Hit Spray for killing a cockroach"); // Output executes here
+        }
+        catch (Exception e) {
+            // Handles any other exception not caught above
             System.out.println("Rocket Launcher for killing a cockroach");
         }
     }
