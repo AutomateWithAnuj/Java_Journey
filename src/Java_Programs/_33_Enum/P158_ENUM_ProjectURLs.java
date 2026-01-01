@@ -18,7 +18,31 @@ enum ProjectUrls {
     KATALON,
     VWO
 }
+/*🔹 What it is
 
+A basic enum
+
+Contains only constant names
+
+No fields, no constructor, no methods
+
+🔹 What it stores
+
+Just identifiers, not values
+
+Internally, each constant is just a single instance of ProjectUrls
+
+🔹 Typical use case
+
+When you need a fixed set of options
+
+Example:
+
+Project names
+
+Status (PASS, FAIL)
+*/
+Environments (DEV, QA, PROD)
 public class P158_ENUM_ProjectURLs {
 
     public static void main(String[] args) {
