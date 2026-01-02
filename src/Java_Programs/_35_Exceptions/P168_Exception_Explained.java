@@ -37,8 +37,10 @@ public class P168_Exception_Explained {
                | ArithmeticException 
                | NumberFormatException e) {
 
-            //catch (ArrayIndexOutOfBoundsException || ArithmeticException e) // ❌    
-            //catch (ArrayIndexOutOfBoundsException OR ArithmeticException e) // ❌
+            // catch (ArrayIndexOutOfBoundsException || ArithmeticException e) // ❌
+            // || is a logical OR operator, used in conditions (if, while), not for types.
+            // catch (ArrayIndexOutOfBoundsException OR ArithmeticException e) // ❌
+            // OR is not a keyword or operator in Java.
 
             // JVM automatically creates the exception object
             // e.getMessage() gives a clear reason for the failure
