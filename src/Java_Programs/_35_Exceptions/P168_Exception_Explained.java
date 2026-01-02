@@ -37,6 +37,9 @@ public class P168_Exception_Explained {
                | ArithmeticException 
                | NumberFormatException e) {
 
+            //catch (ArrayIndexOutOfBoundsException || ArithmeticException e) // ❌    
+            //catch (ArrayIndexOutOfBoundsException OR ArithmeticException e) // ❌
+
             // JVM automatically creates the exception object
             // e.getMessage() gives a clear reason for the failure
             System.out.println(e.getMessage());
