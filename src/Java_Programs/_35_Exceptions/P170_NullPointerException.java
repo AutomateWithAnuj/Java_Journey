@@ -16,7 +16,11 @@ public class P170_NullPointerException {
 
         // Calling a method on a null reference
         // This will cause a NullPointerException at runtime
-        name.trim(); 
+        try {
+            name.trim();   // risky code
+        } catch (NullPointerException e) {
+            System.out.println("Name is null, cannot call trim()");
+        }
         // Output: java.lang.NullPointerException
     }
 }
