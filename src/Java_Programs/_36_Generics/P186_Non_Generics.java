@@ -7,25 +7,7 @@ package Java_Programs._36_Generics;
  */
 public class P186_NonGenerics {
 
-    public static void main(String[] args) {
-
-        // Calls tempSum(int, int)
-        int intResult = tempSum(3, 4);
-        // intResult = 7
-        System.out.println(intResult); // Output: 7
-
-        // Calls tempSum(double, double)
-        double doubleResult = tempSum(3.45, 4.45);
-        // doubleResult = 7.9
-        System.out.println(doubleResult); // Output: 7.9
-
-        // Calls tempSum(String, String)
-        String stringResult = tempSum("Anuj", "Rajput");
-        // stringResult = "AnujRajput"
-        System.out.println(stringResult); // Output: AnujRajput
-    }
-
-    /*
+        /*
      * Adds two integers
      * Used when both arguments are of type int
      */
@@ -47,5 +29,23 @@ public class P186_NonGenerics {
      */
     static String tempSum(String a, String b) {
         return a + b; // returns combined string
+    }
+
+    public static void main(String[] args) {
+
+        // Calls tempSum(int, int)
+        int intResult = tempSum(3, 4);
+        // intResult = 7
+        System.out.println(intResult); // Output: 7
+
+        // Calls tempSum(double, double)
+        double doubleResult = tempSum(3.45, 4.45);
+        // doubleResult = 7.9
+        System.out.println(doubleResult); // Output: 7.9
+
+        // Calls tempSum(String, String)
+        String stringResult = tempSum("Anuj", "Rajput");
+        // stringResult = "AnujRajput"
+        System.out.println(stringResult); // Output: AnujRajput
     }
 }
