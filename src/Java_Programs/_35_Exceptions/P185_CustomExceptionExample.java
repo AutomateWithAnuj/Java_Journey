@@ -43,7 +43,7 @@ class Bank {
      * @param otherBank The bank whose amount is to be added
      * @return Sum of amounts if currencies match, else 0
      */
-    public Integer add(Bank otherBank) {
+    public Integer add(Bank otherBank) { // here we are taking the Bank class as arguments
         if (otherBank.currency.equalsIgnoreCase("INR")) {
             // Currencies match; add amounts
             return this.amount + otherBank.amount;
