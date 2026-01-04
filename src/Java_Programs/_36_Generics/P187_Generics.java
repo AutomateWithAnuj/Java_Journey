@@ -19,6 +19,9 @@ public class P187_Generics {
         // Prints second value
         System.out.println(b); // prints value of b
 
+        // return a + b; // ❌ compile-time error Because T does NOT know how to add (+) values.
+        //it can add int, double, string, but not any other custom type object
+        
         // No actual addition logic, so returning null
         return null;
     }
