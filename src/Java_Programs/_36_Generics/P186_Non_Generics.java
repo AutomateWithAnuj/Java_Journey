@@ -1,21 +1,51 @@
 package Java_Programs._36_Generics;
 
-public class P186_Non_Generics {
+/*
+ * This class demonstrates **method overloading** (NOT generics).
+ * Same method name `tempSum` is used with different parameter types.
+ * The compiler decides which method to call based on argument types.
+ */
+public class P186_NonGenerics {
+
     public static void main(String[] args) {
-        int c = temp_sum(3,4);
-        //we need to use the method overloading to have sum of 3.34+4.45 or Anuj+Rajput
-        //method overloading is not a single function to have all 3 functionality
-        double d = temp_sum(3.45,4.45);
-        String s = temp_sum("Anuj","Rajput");
-    }
-    static int temp_sum(int a, int b){
-        return a+b;
-    }
-    static double temp_sum(double a, double b){
-        return a+b;
-    }
-    static String temp_sum(String a, String b){
-        return a+b;
+
+        // Calls tempSum(int, int)
+        int intResult = tempSum(3, 4);
+        // intResult = 7
+        System.out.println(intResult); // Output: 7
+
+        // Calls tempSum(double, double)
+        double doubleResult = tempSum(3.45, 4.45);
+        // doubleResult = 7.9
+        System.out.println(doubleResult); // Output: 7.9
+
+        // Calls tempSum(String, String)
+        String stringResult = tempSum("Anuj", "Rajput");
+        // stringResult = "AnujRajput"
+        System.out.println(stringResult); // Output: AnujRajput
     }
 
+    /*
+     * Adds two integers
+     * Used when both arguments are of type int
+     */
+    static int tempSum(int a, int b) {
+        return a + b; // returns integer addition
+    }
+
+    /*
+     * Adds two double values
+     * Used when both arguments are of type double
+     */
+    static double tempSum(double a, double b) {
+        return a + b; // returns decimal addition
+    }
+
+    /*
+     * Concatenates two strings
+     * Used when both arguments are of type String
+     */
+    static String tempSum(String a, String b) {
+        return a + b; // returns combined string
+    }
 }
