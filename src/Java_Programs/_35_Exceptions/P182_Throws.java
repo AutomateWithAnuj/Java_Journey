@@ -14,6 +14,7 @@ import java.io.FileReader;
  *
  * Any exception occurring in these operations will be thrown to the calling environment (JVM)
  * because we used 'throws Exception' in the main method.
+ * If an exception is thrown and not caught, the program terminates immediately — throws do NOT allow continuation.
  */
 public class P182_Throws {
 
