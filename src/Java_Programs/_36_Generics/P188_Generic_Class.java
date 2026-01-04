@@ -4,21 +4,6 @@ package Java_Programs._36_Generics;
  * This class demonstrates the usage of a **generic class**.
  * GenericClass<T> can work with any reference data type.
  */
-public class P188_Generic_Class {
-
-    public static void main(String[] args) {
-
-        // Creating a GenericClass object with Integer type
-        GenericClass<Integer> intObject = new GenericClass<>(5);
-        // intObject holds Integer value 5
-
-        // Creating a GenericClass object with String type
-        GenericClass<String> stringObject = new GenericClass<>("Anuj");
-        // stringObject holds String value "Anuj"
-
-        // T is a placeholder that can represent any reference data type
-    }
-}
 
 /*
  * Generic class declaration
@@ -49,5 +34,21 @@ class GenericClass<T> {
      */
     public T getData() {
         return this.data; // returns the stored value
+    }
+}
+
+public class P188_Generic_Class {
+
+    public static void main(String[] args) {
+
+        // Creating a GenericClass object with Integer type
+        GenericClass<Integer> intObject = new GenericClass<>(5);
+        // intObject holds Integer value 5
+
+        // Creating a GenericClass object with String type
+        GenericClass<String> stringObject = new GenericClass<>("Anuj");
+        // stringObject holds String value "Anuj"
+
+        // T is a placeholder that can represent any reference data type
     }
 }
