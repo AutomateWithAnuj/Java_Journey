@@ -14,8 +14,17 @@ public class P189_Generics_List {
         // Raw List (no generics)
         // Can store any type of object → NOT type-safe
         List rawList = new ArrayList();
+        
         // Example: rawList can store Integer, String, Double, etc.
-
+        rawList.add("Anuj");     // String
+        rawList.add(25);         // Integer
+        rawList.add(500000.0);   // Double
+        
+        // No generics are bad because the problem comes later, not while adding.
+        // Example problem
+        // String name = (String) rawList.get(1); //ClassCastException
+        // rawList.get(1) is actually Integer (25) //you cannot type cast here
+        
         // Generic List restricted to Integer values only
         List<Integer> integerList = new ArrayList<>();
         // Can store only Integer objects
