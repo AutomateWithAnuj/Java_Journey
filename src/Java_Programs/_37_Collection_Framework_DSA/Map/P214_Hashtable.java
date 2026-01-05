@@ -3,28 +3,39 @@ package Java_Programs._37_Collection_Framework_DSA.Map;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
+/**
+ * Demonstrates basic usage of Hashtable in Java.
+ * Key points:
+ * - Hashtable is synchronized (thread-safe) but slower than HashMap.
+ * - Null keys or null values are NOT allowed.
+ * - Legacy class, mostly replaced by HashMap in modern code.
+ */
 public class P214_Hashtable {
     public static void main(String[] args) {
-        //Map - K,V null values allows but not for Hashtable
-        //Hashtable - synchronized, slow and legacy class - thread safe
-        //T1, T2 - they will use one by one
-        Hashtable<Integer,String> ht1 = new Hashtable();
-        ht1.put(1,"one");
-        ht1.put(2,"one");
-        ht1.put(3,"three");
-        ht1.put(4,"four");
-        ht1.put(4,"five");
+        // Create a Hashtable with Integer keys and String values
+        Hashtable<Integer, String> ht = new Hashtable<>();
 
-        //ht1.put(5,null); //NullPointerException
-        System.out.println(ht1);
+        // Adding key-value pairs
+        ht.put(1, "one");
+        ht.put(2, "one");   // duplicate value is allowed
+        ht.put(3, "three");
+        ht.put(4, "four");
+        ht.put(4, "five");  // duplicate key overwrites previous value
 
-        //so in hashmap null values and null keys both are allowed but here hashtable it is not allowed
-        //hashmap is not thread safe or we can say it is not synchronised
+        // ht.put(5, null); // Null values not allowed -> would throw NullPointerException
+        System.out.println("Hashtable: " + ht); // Print entire hashtable
 
-        //we can also iterate the hashtable by the enumeration for keys or values any one at a time
-        Enumeration<Integer> e = ht1.keys();
-        while (e.hasMoreElements()){
-            System.out.println(e.nextElement());
+        // Iterate over keys using Enumeration
+        Enumeration<Integer> keys = ht.keys();
+        while (keys.hasMoreElements()) {
+            System.out.println("Key: " + keys.nextElement());
         }
+
+        // Example Output (order not guaranteed):
+        // Hashtable: {4=five, 3=three, 2=one, 1=one}
+        // Key: 4
+        // Key: 3
+        // Key: 2
+        // Key: 1
     }
 }
