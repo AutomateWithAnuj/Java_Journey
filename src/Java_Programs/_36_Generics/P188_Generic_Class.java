@@ -41,6 +41,9 @@ public class P188_Generic_Class {
 
     public static void main(String[] args) {
 
+        //like we know a normal object is created like this
+        //ID i = new ID(5); // here constructor must take an integer value
+        
         // Creating a GenericClass object with Integer type
         GenericClass<Integer> intObject = new GenericClass<>(5);
         // intObject holds Integer value 5
