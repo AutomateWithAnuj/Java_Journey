@@ -2,27 +2,44 @@ package Java_Programs._37_Collection_Framework_DSA.List;
 
 import java.util.List;
 
+/**
+ * Demonstrates usage and limitations of List.of()
+ */
 public class P191_List_I {
+
     public static void main(String[] args) {
-        //List fruits = new List(); //not possible because it is an interface
-        List fruits = List.of("orange","apple","banana","mango","watermelon");
-        //we are using .of() by using the class name because it is a static function in List interface
-        //interface can have static functions after JDK 13
+
+        // List fruits = new List(); 
+        // ❌ Not allowed: List is an interface, cannot be instantiated
+
+        // Creating an immutable List using List.of()
+        // List.of() is a static method available in List interface (Java 9+)
+        List<String> fruits = List.of("orange", "apple", "banana", "mango", "watermelon");
+
+        // Printing the list
         System.out.println(fruits);
+        // Output: [orange, apple, banana, mango, watermelon]
 
-        //but the static functions cannot be changed because you have created with of() function
-        //now let us suppose we want to add chiku
+        // Attempting to modify the list
         fruits.add("chiku");
-        System.out.println(fruits); //UnsupportedOperationException
-        //this happened because these are static functions and they cannot be changed
-        //also this add function in list is incomplete which is abstract method
-        fruits.remove("banana");
-        System.out.println(fruits); //UnsupportedOperationException
-        //this happened because these are static functions and they cannot be changed
-        //also this add function in list is incomplete which is abstract method
+        // ❌ Runtime Error: UnsupportedOperationException
+        // Reason: List created using List.of() is immutable (cannot be changed)
 
-        //so we have been not able to use those methods due to the List Interfaces we have used
-        //inspite of it we have to use the Abstract classes for that which are
-        //ArrayList, LinkedList, Stack, Vector
+        System.out.println(fruits); // This line will not execute due to exception
+
+        fruits.remove("banana");
+        // ❌ Runtime Error: UnsupportedOperationException
+        // Reason: Removal is also not allowed on immutable lists
+
+        System.out.println(fruits); // This line will not execute due to exception
+
+        /*
+         * Conclusion:
+         * - List.of() creates a fixed-size, immutable list
+         * - add(), remove(), update operations are NOT supported
+         *
+         * To perform modification operations, use concrete classes:
+         * ArrayList, LinkedList, Vector, Stack
+         */
     }
 }
