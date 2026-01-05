@@ -2,16 +2,30 @@ package Java_Programs._37_Collection_Framework_DSA.Queue;
 
 import java.util.PriorityQueue;
 
+/**
+ * Demonstrates basic operations of a PriorityQueue in Java.
+ * PriorityQueue stores elements in their natural order automatically.
+ */
 public class P207_Queue {
     public static void main(String[] args) {
-        PriorityQueue q = new PriorityQueue();
-        q.add("Anuj");
-        q.add("Rajput");
-        //PriorityQueue -> it does the Natural Sorting automatically
-        //Already added in natural order so it will not sort them in natural order
-        System.out.println(q);
-        System.out.println(q.peek());//it is seeing the first Element
-        System.out.println(q.poll());//it will remove the first element
-        System.out.println(q);
+        // Create a PriorityQueue of Strings
+        PriorityQueue<String> queue = new PriorityQueue<>();
+
+        // Add elements to the queue
+        queue.add("Anuj");
+        queue.add("Rajput");
+        // Elements are automatically stored in natural order (alphabetical for Strings)
+
+        // Print the queue (internal order may not look fully sorted due to heap structure)
+        System.out.println(queue); // Example Output: [Anuj, Rajput]
+
+        // Peek: view the first element without removing
+        System.out.println(queue.peek()); // Output: Anuj
+
+        // Poll: remove and return the first element (smallest in natural order)
+        System.out.println(queue.poll()); // Output: Anuj
+
+        // Print the queue after removal
+        System.out.println(queue); // Output: [Rajput]
     }
 }
