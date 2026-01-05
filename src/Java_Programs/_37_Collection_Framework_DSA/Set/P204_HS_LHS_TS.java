@@ -2,47 +2,50 @@ package Java_Programs._37_Collection_Framework_DSA.Set;
 
 import java.util.*;
 
+/**
+ * Demonstrates differences between HashSet, LinkedHashSet, and TreeSet.
+ * Highlights uniqueness, ordering, and null behavior.
+ */
 public class P204_HS_LHS_TS {
     public static void main(String[] args) {
-        Set<String> hs = new HashSet<>(); //we didn't make it Generic we only want to store string
-        //Hashing mechanism to store the element
-        hs.add("Apple");
-        hs.add("Orange");
-        hs.add("WaterMelon");
-        hs.add("WaterMelon"); //no duplicates
-        hs.add(null);
-        hs.add(null); //2 null not allowed
-        System.out.println(hs); //no order
+        // ----------------- HashSet -----------------
+        Set<String> hashSet = new HashSet<>(); // Stores elements using hashing, no order guaranteed
+        hashSet.add("Apple");
+        hashSet.add("Orange");
+        hashSet.add("WaterMelon");
+        hashSet.add("WaterMelon"); // Duplicate ignored
+        hashSet.add(null);          // null allowed
+        hashSet.add(null);          // Duplicate null ignored
+        System.out.println("HashSet: " + hashSet); // Output: order not guaranteed
 
-        Iterator iterator = hs.iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
+        // Iterate HashSet
+        System.out.println("Iterating HashSet:");
+        Iterator<String> hsIterator = hashSet.iterator();
+        while (hsIterator.hasNext()) {
+            System.out.println(hsIterator.next());
         }
 
-        Set lhs = new LinkedHashSet();
-        //LinkedList mechanism to store the elements
-        lhs.add("Apple");
-        lhs.add("Orange");
-        lhs.add("WaterMelon");
-        lhs.add("WaterMelon"); //no duplicates
-        lhs.add(null);
-        lhs.add(null); //2 null not allowed
-        System.out.println(lhs); //order will be maintained,
-        System.out.println(lhs.size());
+        // ----------------- LinkedHashSet -----------------
+        Set<String> linkedHashSet = new LinkedHashSet<>(); // Maintains insertion order
+        linkedHashSet.add("Apple");
+        linkedHashSet.add("Orange");
+        linkedHashSet.add("WaterMelon");
+        linkedHashSet.add("WaterMelon"); // Duplicate ignored
+        linkedHashSet.add(null);          // null allowed
+        linkedHashSet.add(null);          // Duplicate null ignored
+        System.out.println("LinkedHashSet: " + linkedHashSet); // Output: insertion order maintained
+        System.out.println("Size of LinkedHashSet: " + linkedHashSet.size());
 
-        Set ts = new TreeSet();
-        //Black and Red Tree mechanism to store the element
-        ts.add("Apple");
-        ts.add("Orange");
-        ts.add("WaterMelon");
-        ts.add("WaterMelon"); //no duplicates
-//        ts.add(null); //we cannot add null because we cannot short if we add null
-//        ts.add(null);
-        System.out.println(ts); //Natural Shorting(short with first character) is done
-        //Naturing shorting is done based on the ascii characters
-        System.out.println(ts.size());
+        // ----------------- TreeSet -----------------
+        Set<String> treeSet = new TreeSet<>(); // Stores elements in natural sorted order
+        treeSet.add("Apple");
+        treeSet.add("Orange");
+        treeSet.add("WaterMelon");
+        treeSet.add("WaterMelon"); // Duplicate ignored
+        // treeSet.add(null); // Not allowed, will throw NullPointerException
+        System.out.println("TreeSet (sorted): " + treeSet); // Output: sorted order
+        System.out.println("Size of TreeSet: " + treeSet.size());
 
-        //ts.add(123);//ClassCastException because it cannot be shorted with 123
-        System.out.println(ts);
+        // treeSet.add(123); // ClassCastException if uncommented, cannot mix types
     }
 }
