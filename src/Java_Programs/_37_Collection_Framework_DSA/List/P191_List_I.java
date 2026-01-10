@@ -12,8 +12,8 @@ public class P191_List_I {
         // List fruits = new List(); 
         // ❌ Not allowed: List is an interface, cannot be instantiated
 
-        // Creating an immutable List using List.of()
-        // List.of() is a static method available in List interface (Java 9+)
+        // List.of() creates an immutable list introduced in Java 9, where elements cannot be added, removed, or modified.
+        // List.of() is a static method available in List interface.
         List<String> fruits = List.of("orange", "apple", "banana", "mango", "watermelon");
 
         // Printing the list
@@ -36,10 +36,9 @@ public class P191_List_I {
         /*
          * Conclusion:
          * - List.of() creates a fixed-size, immutable list
-         * - add(), remove(), update operations are NOT supported
+         * - add(), remove(), update() operations are NOT supported
          *
-         * To perform modification operations, use concrete classes:
-         * ArrayList, LinkedList, Vector, Stack
+         * To perform modification operations, use concrete classes: ArrayList, LinkedList, Vector, Stack
          */
     }
 }
