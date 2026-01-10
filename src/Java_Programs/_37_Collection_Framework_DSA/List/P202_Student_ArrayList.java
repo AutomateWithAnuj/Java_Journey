@@ -4,6 +4,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Student class representing a simple student entity
+ */
+class Student {
+
+    // Private fields for encapsulation
+    private String name;
+    private String rollNo;
+
+    // Constructor to initialize Student object
+    public Student(String name, String rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+
+    // Getter and Setter methods
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRollNo() {
+        return rollNo;
+    }
+
+    public void setRollNo(String rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    /**
+     * Prints student details to the console
+     */
+    public void Details() {
+        System.out.println("Student Name: " + this.name);
+        System.out.println("Student RollNo: " + this.rollNo);
+    }
+}
+
+/**
  * Demonstrates storing custom Student objects in an ArrayList
  */
 public class P202_Student_ArrayList {
@@ -43,46 +84,5 @@ public class P202_Student_ArrayList {
         // Output:
         // Student Name: Avinash
         // Student RollNo: 13203
-    }
-}
-
-/**
- * Student class representing a simple student entity
- */
-class Student {
-
-    // Private fields for encapsulation
-    private String name;
-    private String rollNo;
-
-    // Constructor to initialize Student object
-    public Student(String name, String rollNo) {
-        this.name = name;
-        this.rollNo = rollNo;
-    }
-
-    // Getter and Setter methods
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRollNo() {
-        return rollNo;
-    }
-
-    public void setRollNo(String rollNo) {
-        this.rollNo = rollNo;
-    }
-
-    /**
-     * Prints student details to the console
-     */
-    public void Details() {
-        System.out.println("Student Name: " + this.name);
-        System.out.println("Student RollNo: " + this.rollNo);
     }
 }
