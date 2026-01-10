@@ -47,6 +47,7 @@ public class P196_LinkedList {
         // Output: true
 
         // Getting index of first occurrence of "amit"
+        //indexOf() is available only in List-based collections
         System.out.println(linkedList.indexOf("amit"));
         // Output: 2
     }
