@@ -1,6 +1,7 @@
 package Java_Programs._37_Collection_Framework_DSA.List;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -8,81 +9,78 @@ import java.util.List;
  */
 class Student {
 
-    // Private fields for encapsulation
     private String name;
     private String rollNo;
 
-    // Constructor to initialize Student object
     public Student(String name, String rollNo) {
         this.name = name;
         this.rollNo = rollNo;
     }
 
-    // Getter and Setter methods
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getRollNo() {
         return rollNo;
     }
 
-    public void setRollNo(String rollNo) {
-        this.rollNo = rollNo;
-    }
-
-    /**
-     * Prints student details to the console
-     */
+    // Method to print student details
     public void Details() {
-        System.out.println("Student Name: " + this.name);
-        System.out.println("Student RollNo: " + this.rollNo);
+        System.out.println("Student Name: " + name);
+        System.out.println("Student RollNo: " + rollNo);
+        System.out.println("---------------------");
     }
 }
 
 /**
- * Demonstrates storing custom Student objects in an ArrayList
+ * Demonstrates storing and iterating Student objects in an ArrayList
  */
 public class P202_Student_ArrayList {
 
     public static void main(String[] args) {
 
-        // Creating Student objects
         Student s1 = new Student("Anuj", "13201");
         Student s2 = new Student("Amit", "13202");
         Student s3 = new Student("Avinash", "13203");
 
-        // Creating an ArrayList to store Student objects
-        List students = new ArrayList();
+        // Use GENERICS (important for interviews)
+        List<Student> students = new ArrayList<>();
 
-        // Adding Student objects to the list
         students.add(s1);
         students.add(s2);
         students.add(s3);
 
-        // Printing the list
-        // By default, it prints object references (because toString is not overridden)
-        System.out.println(students);
-        // Output: [Student@xxxx, Student@xxxx, Student@xxxx]
+        // ------------------------------------
+        // 1️⃣ Using Iterator (MOST IMPORTANT)
+        // ------------------------------------
+        System.out.println("Using Iterator:");
+        Iterator<Student> itr = students.iterator();
+        while (itr.hasNext()) {
+            Student s = itr.next();
+            s.Details();
+        }
 
-        // Printing details of each student using method call
-        s1.Details();
-        // Output:
-        // Student Name: Anuj
-        // Student RollNo: 13201
+        // ------------------------------------
+        // 2️⃣ Using Enhanced for-each loop
+        // ------------------------------------
+        System.out.println("Using For-Each Loop:");
+        for (Student s : students) {
+            s.Details();
+        }
 
-        s2.Details();
-        // Output:
-        // Student Name: Amit
-        // Student RollNo: 13202
+        // ------------------------------------
+        // 3️⃣ Using a traditional for loop
+        // ------------------------------------
+        System.out.println("Using Traditional For Loop:");
+        for (int i = 0; i < students.size(); i++) {
+            students.get(i).Details();
+        }
 
-        s3.Details();
-        // Output:
-        // Student Name: Avinash
-        // Student RollNo: 13203
+        // ------------------------------------
+        // 4️⃣ Using forEach() + Lambda (Java 8+)
+        // ------------------------------------
+        System.out.println("Using forEach + Lambda:");
+        students.forEach(s -> s.Details());
     }
 }
