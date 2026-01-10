@@ -15,7 +15,8 @@ public class P193_ArrayList {
         List<Integer> integerList = new ArrayList<>();
 
         // ArrayList with initial capacity of 10
-        // Capacity means internal size, not the number of elements
+        // new ArrayList(10) sets the initial internal capacity to 10, 
+        // not the size. The list is empty initially and grows dynamically as elements are added.
         List capacityList = new ArrayList(10);
 
         // Non-generic ArrayList: allows any type of object
