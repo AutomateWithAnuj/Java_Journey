@@ -5,7 +5,7 @@ package Java_Programs._33_Enum;
  * This avoids hardcoding URLs throughout the code
  * and keeps them centralized and safe.
  */
-public enum P162_ENUM_APIURLs {
+enum P162_ENUM_APIURLs {
 
     // ENUM constants mapped with their respective API URLs
     VWO("https://app.vwo.com"),        // VWO application base URL
@@ -32,8 +32,6 @@ public enum P162_ENUM_APIURLs {
         return this.url;
     }
 }
-
-package Java_Programs._33_Enum;
 
 public class P163_ENUM_APIURLs_Execution {
 

@@ -4,7 +4,7 @@ package Java_Programs._33_Enum;
  * ENUM used to represent colors with their HEX codes.
  * Each ENUM constant is mapped to a fixed HEX value.
  */
-public enum P161_ENUM_Colors {
+enum P161_ENUM_Colors {
 
     // ENUM constants with associated HEX color codes
     RED("#FF0000"),       // Red color HEX code
@@ -32,8 +32,6 @@ public enum P161_ENUM_Colors {
         return this.hexCode;
     }
 }
-package Java_Programs._33_Enum;
-
 public class P161_ENUM_Execution {
 
     public static void main(String[] args) {

@@ -42,7 +42,7 @@ class SampleClass {
 /**
  * Main class to demonstrate Instance Initialization Block (IIB)
  */
-public class InstanceInitializationDemo {
+public class P151_IIB {
 
     /**
      * Main method

@@ -22,7 +22,6 @@ public class P094_StringBuffer {
         // The original "AnujRajput" becomes "tupjaRjunA".
 
         // After these operations, still only ONE object exists in memory.
-c
         // ------------------ More StringBuffer Operations ------------------
 
         StringBuffer sb = new StringBuffer("Java");
