@@ -7,32 +7,6 @@ import java.util.List;
 /**
  * Demonstrates sorting custom objects using Comparable
  */
-public class P205_Comparable {
-
-    public static void main(String[] args) {
-
-        // Creating Student objects
-        Student s1 = new Student(101, "Anuj", 24);
-        Student s2 = new Student(104, "Amit", 55);
-        Student s3 = new Student(103, "Pramod", 35);
-
-        // List to store Student objects (type-safe using generics)
-        List<Student> students = new ArrayList<>();
-
-        // Adding objects to the list
-        students.add(s1);
-        students.add(s2);
-        students.add(s3);
-
-        // Sorting the list
-        // Works because Student implements Comparable<Student>
-        Collections.sort(students);
-
-        // Printing sorted list
-        // Output will be sorted based on name (Amit, Anuj, Pramod)
-        System.out.println(students); // [Student{rollNo=104, name=Amit, age=55}, ...]
-    }
-}
 
 /**
  * Student class implementing Comparable to define natural sorting order
@@ -76,5 +50,32 @@ class Student implements Comparable<Student> {
         // Other valid options (only one at a time):
         // return this.rollNo - other.rollNo; // sort by roll number
         // return this.age - other.age;       // sort by age
+    }
+}
+
+public class P205_Comparable {
+
+    public static void main(String[] args) {
+
+        // Creating Student objects
+        Student s1 = new Student(101, "Anuj", 24);
+        Student s2 = new Student(104, "Amit", 55);
+        Student s3 = new Student(103, "Pramod", 35);
+
+        // List to store Student objects (type-safe using generics)
+        List<Student> students = new ArrayList<>();
+
+        // Adding objects to the list
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+
+        // Sorting the list
+        // Works because Student implements Comparable<Student>
+        Collections.sort(students);
+
+        // Printing sorted list
+        // Output will be sorted based on name (Amit, Anuj, Pramod)
+        System.out.println(students); // [Student{rollNo=104, name=Amit, age=55}, ...]
     }
 }
