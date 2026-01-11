@@ -73,6 +73,7 @@ public class P205_Comparable {
         // Sorting the list
         // Works because Student implements Comparable<Student>
         Collections.sort(students);
+        // Collections.sort() automatically uses compareTo()
 
         // Printing sorted list
         // Output will be sorted based on name (Amit, Anuj, Pramod)
