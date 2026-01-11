@@ -9,44 +9,11 @@ import java.util.List;
  * Demonstrates sorting custom objects using Comparator
  * Different sorting logics are defined outside the Student class
  */
-public class P206_Comparator {
-
-    public static void main(String[] args) {
-
-        // Creating Student objects
-        Student s1 = new Student(101, "Anuj", 24);
-        Student s2 = new Student(104, "Amit", 55);
-        Student s3 = new Student(103, "Pramod", 35);
-
-        // List to store Student objects
-        List<Student> students = new ArrayList<>();
-
-        // Adding students to the list
-        students.add(s1);
-        students.add(s2);
-        students.add(s3);
-
-        // Sorting by Age using AgeComparator
-        Collections.sort(students, new AgeComparator());
-        System.out.println("Sort by Age: " + students);
-        // Output: Students sorted in ascending order of age
-
-        // Sorting by Name using NameComparator
-        Collections.sort(students, new NameComparator());
-        System.out.println("Sort by Name: " + students);
-        // Output: Students sorted alphabetically by name
-
-        // Sorting by Roll Number using RollNoComparator
-        Collections.sort(students, new RollNoComparator());
-        System.out.println("Sort by RollNo: " + students);
-        // Output: Students sorted in ascending order of roll number
-    }
-}
 
 /**
  * Plain Student class
  * Does NOT implement Comparable
- * Sorting logic is provided externally using Comparator
+ * Sorting logic is provided externally using a Comparator
  */
 class Student {
 
@@ -85,6 +52,40 @@ class Student {
                 ", name=" + name +
                 ", age=" + age +
                 '}';
+    }
+}
+
+public class P206_Comparator {
+
+    public static void main(String[] args) {
+
+        // Creating Student objects
+        Student s1 = new Student(101, "Anuj", 24);
+        Student s2 = new Student(104, "Amit", 55);
+        Student s3 = new Student(103, "Pramod", 35);
+
+        // List to store Student objects
+        List<Student> students = new ArrayList<>();
+
+        // Adding students to the list
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+
+        // Sorting by Age using AgeComparator
+        Collections.sort(students, new AgeComparator());
+        System.out.println("Sort by Age: " + students);
+        // Output: Students sorted in ascending order of age
+
+        // Sorting by Name using NameComparator
+        Collections.sort(students, new NameComparator());
+        System.out.println("Sort by Name: " + students);
+        // Output: Students sorted alphabetically by name
+
+        // Sorting by Roll Number using RollNoComparator
+        Collections.sort(students, new RollNoComparator());
+        System.out.println("Sort by RollNo: " + students);
+        // Output: Students sorted in ascending order of roll number
     }
 }
 
