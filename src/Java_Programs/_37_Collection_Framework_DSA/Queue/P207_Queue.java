@@ -16,7 +16,8 @@ public class P207_Queue {
         queue.add("Rajput");
         // Elements are automatically stored in natural order (alphabetical for Strings)
 
-        // Print the queue (internal order may not look fully sorted due to heap structure)
+        // Only the HEAD element is guaranteed to be in correct priority order.
+        // The remaining elements are NOT guaranteed to be sorted.
         System.out.println(queue); // Example Output: [Anuj, Rajput]
 
         // Peek: view the first element without removing
