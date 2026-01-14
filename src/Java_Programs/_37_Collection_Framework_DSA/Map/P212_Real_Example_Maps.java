@@ -27,8 +27,8 @@ public class P212_Real_Example_Maps {
         student2.put("address2", 345);          // Address line 2
 
         // Store all student maps in a List
-        List<Map<String, Object>> studentsList = new ArrayList<>();
-        //List<Map<String, Object>> → A list that stores multiple maps, each map has String keys and Object values.
+        List<Map<String, Object>> studentsList = new ArrayList<>(); //A list that stores multiple maps, 
+        // each map has String keys and Object values.
         studentsList.add(student1);
         studentsList.add(student2);
 
