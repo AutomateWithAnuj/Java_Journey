@@ -23,7 +23,8 @@ public class P214_Hashtable {
         ht.put(4, "five");  // duplicate key overwrites previous value
 
         // ht.put(5, null); // Null values not allowed -> would throw NullPointerException
-        System.out.println("Hashtable: " + ht); // Print entire hashtable
+        System.out.println("Hashtable: " + ht); 
+        // Example Output (order not guaranteed): {4=five, 3=three, 2=one, 1=one}
 
         // Iterate over keys using Enumeration
         Enumeration<Integer> keys = ht.keys();
@@ -32,7 +33,6 @@ public class P214_Hashtable {
         }
 
         // Example Output (order not guaranteed):
-        // Hashtable: {4=five, 3=three, 2=one, 1=one}
         // Key: 4
         // Key: 3
         // Key: 2
