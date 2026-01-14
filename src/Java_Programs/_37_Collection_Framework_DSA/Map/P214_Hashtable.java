@@ -28,18 +28,19 @@ public class P214_Hashtable {
         System.out.println("Hashtable: " + ht); 
         // Example Output (order not guaranteed): {4=five, 3=three, 2=one, 1=one}
 
-        // Iterate over keys using Iterator
+        // Iterate over keys and print key with value using Iterator
         Set<Integer> keys = ht.keySet();       // get all keys
         Iterator<Integer> itr = keys.iterator();
         while (itr.hasNext()) {
             Integer key = itr.next();
-            System.out.println("Key: " + key);
+            String value = ht.get(key);
+            System.out.println("Key=" + key + ", Value=" + value);
         }
 
         // Example Output (order not guaranteed):
-        // Key: 4
-        // Key: 3
-        // Key: 2
-        // Key: 1
+        // Key=4, Value=five
+        // Key=3, Value=three
+        // Key=2, Value=one
+        // Key=1, Value=one
     }
 }
