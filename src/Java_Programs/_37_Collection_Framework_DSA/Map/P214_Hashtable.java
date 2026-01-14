@@ -1,14 +1,16 @@
 package Java_Programs._37_Collection_Framework_DSA.Map;
 
-import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
- * Demonstrates basic usage of Hashtable in Java.
+ * Demonstrates basic usage of Hashtable in Java using Iterator.
  * Key points:
  * - Hashtable is synchronized (thread-safe) but slower than HashMap.
  * - Null keys or null values are NOT allowed.
  * - Legacy class, mostly replaced by HashMap in modern code.
+ * - Iterator is preferred over Enumeration in modern Java.
  */
 public class P214_Hashtable {
     public static void main(String[] args) {
@@ -26,10 +28,12 @@ public class P214_Hashtable {
         System.out.println("Hashtable: " + ht); 
         // Example Output (order not guaranteed): {4=five, 3=three, 2=one, 1=one}
 
-        // Iterate over keys using Enumeration
-        Enumeration<Integer> keys = ht.keys();
-        while (keys.hasMoreElements()) {
-            System.out.println("Key: " + keys.nextElement());
+        // Iterate over keys using Iterator
+        Set<Integer> keys = ht.keySet();       // get all keys
+        Iterator<Integer> itr = keys.iterator();
+        while (itr.hasNext()) {
+            Integer key = itr.next();
+            System.out.println("Key: " + key);
         }
 
         // Example Output (order not guaranteed):
