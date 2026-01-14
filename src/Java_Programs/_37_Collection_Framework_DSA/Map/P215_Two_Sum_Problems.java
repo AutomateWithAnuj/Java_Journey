@@ -39,6 +39,7 @@ public class P215_Two_Sum_Problems {
                     // Key = index, Value = number at that index
                     map.put(i, nums[i]); // i-th element
                     map.put(j, nums[j]); // j-th element
+                    // we do the above for no common key-value pairs
                     // Now the map contains the two numbers that sum up to the target
                 }
             }
