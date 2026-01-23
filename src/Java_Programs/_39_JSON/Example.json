@@ -1,13 +1,16 @@
 {
-  "name": "anuj",
-  "age" : 34,
-  "salary" : 5.5,
-  "isMale": "true",
-  "address" : {
-    "home1" : "gwalior",
-    "home2" : "datia",
-    "office" : "pune"
+  "name": "anuj",                 
+  "age": 34,                     
+  "salary": 5.5,                 
+  "isMale": true,                
+  "address": {                   
+    "home1": "gwalior",
+    "home2": "datia",
+    "office": "pune"
   },
-  "phoneNo" : ["9171167945","8120275173"],
-  "lambo" : null
+  "phoneNo": [                   
+    "9171167945",
+    "8120275173"
+  ],
+  "lambo": null                  
 }
