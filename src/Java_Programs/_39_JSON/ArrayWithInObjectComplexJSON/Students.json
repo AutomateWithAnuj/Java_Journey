@@ -1,3 +1,8 @@
 {
-  "students" : ["Ram","Shyam","Akshay","Prashant"]
+  "students": [
+    "Ram",
+    "Shyam",
+    "Akshay",
+    "Prashant"
+  ]
 }
