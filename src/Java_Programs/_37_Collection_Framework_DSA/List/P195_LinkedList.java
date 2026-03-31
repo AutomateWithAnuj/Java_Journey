@@ -9,8 +9,8 @@ public class P195_LinkedList {
 
     public static void main(String[] args) {
 
-        // Creating a LinkedList (non-generic for demonstration)
-        LinkedList animals = new LinkedList();
+        // Creating a LinkedList using Generics
+        LinkedList<String> animals = new LinkedList<>();
 
         // Adding elements to the list
         animals.add("Dog");        // Added at the end
