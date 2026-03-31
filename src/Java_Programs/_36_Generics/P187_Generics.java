@@ -19,30 +19,44 @@ public class P187_Generics {
         // Prints second value
         System.out.println(b); // prints value of b
 
-        // return a + b; // ❌ compile-time error Because T does NOT know how to add (+) values.
-        //it can add int, double, string, but not any other custom type object
-        
-        // No actual addition logic, so returning null
+        // Addition logic for String
+        if (a instanceof String && b instanceof String) {
+            return (T) (((String) a) + ((String) b));
+        }
+
+        // Addition logic for Numbers
+        if (a instanceof Number && b instanceof Number) {
+
+            Double result = ((Number) a).doubleValue() + ((Number) b).doubleValue();
+            return (T) result;
+        }
+
+        // If unsupported type
+        System.out.println("Addition not supported for this type");
         return null;
     }
-        public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
         // Calling generic method with Integer values
-        temp_sum(10, 20);
+        System.out.println(temp_sum(10, 20));
         // Output:
         // 10
         // 20
+        // 30.0
 
         // Calling generic method with Double values
-        temp_sum(3.5, 4.5);
+        System.out.println(temp_sum(3.5, 4.5));
         // Output:
         // 3.5
         // 4.5
+        // 8.0
 
         // Calling generic method with String values
-        temp_sum("Anuj", "Rajput");
+        System.out.println(temp_sum("Anuj", "Rajput"));
         // Output:
         // Anuj
         // Rajput
+        // AnujRajput
     }
 }
