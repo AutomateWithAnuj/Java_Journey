@@ -11,8 +11,8 @@ public class P199_Collection_Sort {
 
     public static void main(String[] args) {
 
-        // Creating a non-generic List to store marks
-        List marks = new ArrayList();
+        // Creating a generic List to store marks
+        List<Integer> marks = new ArrayList<>();
 
         // Adding integer values (marks)
         marks.add(91);
